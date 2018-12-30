@@ -12,7 +12,7 @@ simple_keys = [
 ]
 alternate_keys = {
     'backspace': 'backspace',
-    'junk': 'backspacev',
+    'junk': 'backspace',
     'forward delete': 'delete',
     'next': 'space'
 }

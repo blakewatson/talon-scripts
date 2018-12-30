@@ -15,6 +15,8 @@ ctx.keymap({
 
     # navigation
     'last window': Key('cmd-tab'),
+    'ally': Key('alt-space'),
+    'clippy': Key('alt-cmd-c'),
 
     # browsers
     'refresh': Key('cmd-shift-r'),
