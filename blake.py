@@ -10,8 +10,10 @@ ctx.keymap({
     'killer': [Key('backspace')] * 2,
     'copy': Key('cmd-c'),
     'paste': Key('cmd-v'),
-    'indent': Key('cmd-]'),
-    'outdent': Key('cmd-['),
+    'cut': Key('cmd-x'),
+
+    # used for textexpander
+    'special': '§',
 
     # navigation
     'last window': Key('cmd-tab'),
@@ -29,6 +31,8 @@ ctx.keymap({
     # code
     'state far': 'var ',
     'op arrow': ' => ',
+    'indent': Key('cmd-]'),
+    'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
     'terminate comma': [Key('cmd-right'), ',']
 })
