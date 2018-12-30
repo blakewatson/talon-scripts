@@ -22,10 +22,11 @@ ctx.keymap({
     # global
     'file save': Key('cmd-s'),
     'undo': Key('cmd-z'),
+    'mission': Key('ctrl-up'),
 
     # code
     'state far': 'var ',
     'op arrow': ' => ',
     'terminate': [Key('cmd-right'), ';'],
-    'mission control': Key('ctrl-up')
+    'terminate comma': [Key('cmd-right'), ',']
 })
