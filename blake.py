@@ -11,6 +11,9 @@ ctx.keymap({
     'copy': Key('cmd-c'),
     'paste': Key('cmd-v'),
     'cut': Key('cmd-x'),
+    'big dash': '–',
+    'bigger dash': '—',
+    'start paragraph': [Key('enter')] * 2,
 
     # used for textexpander
     'special': '§',
