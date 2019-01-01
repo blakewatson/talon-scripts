@@ -21,7 +21,7 @@ ctx.keymap({
     # navigation
     'last window': Key('cmd-tab'),
     'ally': Key('alt-space'),
-    'clippy': Key('alt-cmd-c'),
+    'clipper': Key('alt-cmd-c'),
 
     # browsers
     'refresh': Key('cmd-shift-r'),
@@ -29,6 +29,7 @@ ctx.keymap({
     # global
     'file save': Key('cmd-s'),
     'undo': Key('cmd-z'),
+    'search': Key('cmd-f'),
     'mission': Key('ctrl-up'),
 
     # code
