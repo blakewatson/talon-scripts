@@ -20,7 +20,7 @@ ctx.keymap({
 
     # navigation
     'last window': Key('cmd-tab'),
-    'ally': Key('alt-space'),
+    'alley': Key('alt-space'),
     'clipper': Key('alt-cmd-c'),
 
     # browsers
