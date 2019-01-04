@@ -8,5 +8,7 @@ ctx.keymap({
     'grab next': Key('cmd-d'),
     'grab all': Key('shift-cmd-l'),
     'master': Key('cmd-p'),
+    'gopreev': Key('cmd-shift-['),
+    'gonext': Key('cmd-shift-]'),
     'console log': 'console.log('
 })
