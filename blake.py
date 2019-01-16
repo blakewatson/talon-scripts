@@ -38,5 +38,6 @@ ctx.keymap({
     'indent': Key('cmd-]'),
     'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
-    'terminate comma': [Key('cmd-right'), ',']
+    'terminate comma': [Key('cmd-right'), ','],
+    'pseudo': 'sudo '
 })
