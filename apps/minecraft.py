@@ -16,10 +16,17 @@ def hold_key(m):
         ctrl.key_press(key_to_press, hold=microseconds)
 
 def jump(m):
-    ctrl.key_press('space', hold=1000000)
+    ctrl.key_press('space', hold=500000)
 
-""" ctx.keymap({
+def climb(m):
+    ctrl.key_press('space', down=True)
+    time.sleep(0.25)
+    ctrl.key_press('u')
+    ctrl.key_press('space', up=True)
+
+ctx.keymap({
     'attack (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,
     'jumper': jump,
-    'place': 'u'
-}) """
+    'place': 'u',
+    'tower': climb
+})
