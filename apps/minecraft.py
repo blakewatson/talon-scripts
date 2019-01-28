@@ -3,7 +3,7 @@ from talon.voice import Context, Key, press
 from talon import ctrl
 from ..utils import parse_words_as_integer
 
-ctx = Context("minecraft")
+ctx = Context('minecraft', func=lambda app, win: win.title.startswith('Minecraft 1'))
 
 def place(m):
     times = 1
