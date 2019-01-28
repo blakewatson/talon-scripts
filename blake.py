@@ -1,6 +1,13 @@
 from talon.voice import Context, Key
+from .utils import parse_words, join_words, insert
 
 ctx = Context('blake')
+
+def git_commit(m):
+    message = join_words(parse_words(m)).lower()
+    text = 'git commit -m "%s"' % message
+    insert(text)
+
 ctx.keymap({
     # working with text
     'word left': Key('alt-left'),
@@ -39,5 +46,16 @@ ctx.keymap({
     'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
     'terminate comma': [Key('cmd-right'), ','],
-    'pseudo': 'sudo '
+
+    # termmnal
+    'pseudo': 'sudo ',
+    'get pull': 'git pull',
+    'get push': 'git push',
+    'get status': 'git status',
+    'get add': 'git add ',
+    'get add all': 'git add *',
+    'get commit <dgndictation>': git_commit,
+    'CD': 'cd ',
+    'lister': 'ls',
+    'list la': 'ls -la'
 })

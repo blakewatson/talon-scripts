@@ -68,9 +68,7 @@ formatters = {
     'title':  (False, lambda i, word, _: word.capitalize()),
     'allcaps': (False, lambda i, word, _: word.upper()),
     'dubstring': (False, surround('"')),
-    'string': (False, surround("'")),
-    'padded': (False, surround(" ")),
-    'rot-thirteen':  (False, rot13),
+    'string': (False, surround("'"))
 }
 
 def FormatText(m):
@@ -145,13 +143,11 @@ ctx.keymap({
     'triple quote': "'''",
 
     '(dot dot | dotdot)': '..',
-    'cd': 'cd ',
     'cd talon home': 'cd {}'.format(TALON_HOME),
     'cd talon user': 'cd {}'.format(TALON_USER),
     'cd talon plugins': 'cd {}'.format(TALON_PLUGINS),
 
     'const': 'const ',
-    'static': 'static ',
 
 #    'state (def | deaf | deft)': 'def ',
 #    'state else if': 'elif ',
