@@ -5,6 +5,14 @@ from ..utils import parse_words_as_integer
 
 ctx = Context("minecraft")
 
+def place(m):
+    times = 1
+    if len(m._words) > 1:
+        times = parse_words_as_integer(m._words[1:])
+    for t in range(times):
+        ctrl.key_press('u')
+        time.sleep(0.25)
+
 def hold_key(m):
     keymap = {
         'attack': 'k',
@@ -36,12 +44,13 @@ def start_attack(m):
 def stop_attack(m):
     ctrl.key_press('k', up=True)
 
-""" ctx.keymap({
+ctx.keymap({
     'attack (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,
     'eat (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,
     'jumper': jump,
-    'place': 'u',
+    'place [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)]': place,
     'tower (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': climb,
     'hitter': start_attack,
-    'stop': stop_attack
-}) """
+    'stop': stop_attack,
+    'dismount': Key('shift')
+})
