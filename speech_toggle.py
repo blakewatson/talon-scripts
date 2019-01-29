@@ -1,9 +1,16 @@
-from talon.voice import Context, ContextGroup
+from talon import tap, voice
 from talon.engine import engine
 from talon_plugins import speech
 
-sleep_group = ContextGroup('sleepy')
-sleepy = Context('sleepy', group=sleep_group)
+sleep_group = voice.ContextGroup('sleepy')
+sleepy = voice.Context('sleepy', group=sleep_group)
+
+# toggle button
+def on_key(typ, e):
+   if e == 'alt-ctrl-f12' and e.down:
+        speech.set_enabled(not voice.talon.enabled)
+        e.block()
+tap.register(tap.KEY|tap.HOOK, on_key)
 
 sleepy.keymap({
     'talon sleep': lambda m: speech.set_enabled(False),
