@@ -1,5 +1,5 @@
-from talon.voice import Context, Key
-from .utils import parse_words, join_words, insert
+from talon.voice import Context, Key, press
+from .utils import parse_words, join_words, insert, parse_words_as_integer
 
 ctx = Context('blake')
 
@@ -7,6 +7,12 @@ def git_commit(m):
     message = join_words(parse_words(m)).lower()
     text = 'git commit -m "%s"' % message
     insert(text)
+
+def multi_arrow(m):
+    times = parse_words_as_integer(m._words[1:])
+    if times > 0 and times < 10:
+        for t in range(times):
+            press(m._words[0])
 
 ctx.keymap({
     # working with text
@@ -38,6 +44,10 @@ ctx.keymap({
     'undo': Key('cmd-z'),
     'search': Key('cmd-f'),
     'mission': Key('ctrl-up'),
+    'left (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
+    'up (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
+    'right (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
+    'down (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
 
     # code
     'state far': 'var ',
