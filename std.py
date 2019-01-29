@@ -188,7 +188,7 @@ ctx.keymap({
 
     '(op | is) greater [than]': ' > ',
     '(op | is) less [than]': ' < ',
-    '(op | is) equal': ' == ',
+    '(op | is) equal': ' === ',
     '(op | is) not equal': ' != ',
     '(op | is) greater [than] or equal': ' >= ',
     '(op | is) less [than] or equal': ' <= ',
