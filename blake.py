@@ -14,10 +14,18 @@ def multi_arrow(m):
         for t in range(times):
             press(m._words[0])
 
+def word_travel(m):
+    times = parse_words_as_integer(m._words[2:])
+    direction = m._words[1]
+    if times > 0 and times < 10:
+        for t in range(times):
+            press('alt-'+direction)
+
 ctx.keymap({
     # working with text
     'word left': Key('alt-left'),
     'word right': Key('alt-right'),
+    'words (left | right) (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': word_travel,
     'grab left': Key('alt-shift-left'),
     'grab right': Key('alt-shift-right'),
     'killer': [Key('backspace')] * 2,

@@ -64,11 +64,11 @@ formatters = {
     'smash':  (True,  lambda i, word, _: word),
     # spinal or kebab?
     'spinal':  (True,  lambda i, word, _: word if i == 0 else '-'+word),
-    # 'sentence':  (False, lambda i, word, _: word.capitalize() if i == 0 else word),
+    'sentence':  (False, lambda i, word, _: word.capitalize() if i == 0 else word),
     'title':  (False, lambda i, word, _: word.capitalize()),
     'allcaps': (False, lambda i, word, _: word.upper()),
     'dubstring': (False, surround('"')),
-    'string': (False, surround("'"))
+    #'string': (False, surround("'"))
 }
 
 def FormatText(m):
