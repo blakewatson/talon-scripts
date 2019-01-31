@@ -44,6 +44,12 @@ def start_attack(m):
 def stop_attack(m):
     ctrl.key_press('k', up=True)
 
+def draw_bow(m):
+    ctrl.key_press('u', down=True)
+
+def fire_bow(m):
+    ctrl.key_press('u', up=True)
+
 ctx.keymap({
     'attack (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,
     'eat (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,
@@ -52,5 +58,7 @@ ctx.keymap({
     'tower (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': climb,
     'hitter': start_attack,
     'stop': stop_attack,
-    'dismount': Key('shift')
+    'dismount': Key('shift'),
+    'sniper': draw_bow,
+    'fire bow': fire_bow
 })
