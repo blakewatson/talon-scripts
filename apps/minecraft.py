@@ -60,5 +60,6 @@ ctx.keymap({
     'stop': stop_attack,
     'dismount': Key('shift'),
     'sniper': draw_bow,
-    'fire bow': fire_bow
+    'fire bow': fire_bow,
+    'where am i': Key('f3')
 })
