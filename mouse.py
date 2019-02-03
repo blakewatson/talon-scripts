@@ -96,8 +96,8 @@ keymap = {
     # jsc added
     "(shift click | shicks)": shift_click,
     "(command click | chom lick)": command_click,
-    "wheel down": mouse_scroll(-200),
-    "wheel up": mouse_scroll(200),
+    "wheel down": mouse_scroll(-400),
+    "wheel up": mouse_scroll(400),
 }
 
 ctx.keymap(keymap)
