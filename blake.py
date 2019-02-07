@@ -64,6 +64,7 @@ ctx.keymap({
     'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
     'terminate comma': [Key('cmd-right'), ','],
+    'plug-in': 'plugin',
 
     # termmnal
     'pseudo': 'sudo ',
