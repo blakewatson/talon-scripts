@@ -17,9 +17,19 @@ def multi_arrow(m):
 def word_travel(m):
     times = parse_words_as_integer(m._words[2:])
     direction = m._words[1]
-    if times > 0 and times < 10:
+    repeat_press(times, 'alt-'+direction)
+
+def grab_lines(m):
+    times = parse_words_as_integer(m._words[2:])
+    direction = m._words[1]
+    repeat_press(times, 'shift-'+direction)
+    press('cmd-shift-right')
+    
+
+def repeat_press(times, command, limit = 10):
+    if times > 0 and times < limit:
         for t in range(times):
-            press('alt-'+direction)
+            press(command)
 
 ctx.keymap({
     # working with text
@@ -28,6 +38,7 @@ ctx.keymap({
     'words (left | right) (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': word_travel,
     'grab left': Key('alt-shift-left'),
     'grab right': Key('alt-shift-right'),
+    'cover (up | down) (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': grab_lines,
     'killer': [Key('backspace')] * 2,
     'copy': Key('cmd-c'),
     'paste': Key('cmd-v'),
@@ -35,6 +46,8 @@ ctx.keymap({
     'big dash': '–',
     'bigger dash': '—',
     'start paragraph': [Key('enter')] * 2,
+    'clap': Key('cmd-right'),
+    'klapper | clapper': Key('cmd-left'),
 
     # used for textexpander
     'special': '§',
@@ -64,6 +77,12 @@ ctx.keymap({
     'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
     'terminate comma': [Key('cmd-right'), ','],
+    'terminate colon': [Key('cmd-right'), ':'],
+    'terminate prop': [Key('cmd-right'), ': '],
+    'plug-in': 'plugin',
+    'in-line': 'inline',
+    'panhandle': ['<?php  ?>'] + ([Key('left')] * 3),
+    'echolocation': ['<?=  ?>'] + ([Key('left')] * 3),
 
     # termmnal
     'pseudo': 'sudo ',
