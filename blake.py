@@ -83,6 +83,7 @@ ctx.keymap({
     'in-line': 'inline',
     'panhandle': ['<?php  ?>'] + ([Key('left')] * 3),
     'echolocation': ['<?=  ?>'] + ([Key('left')] * 3),
+    'purana | piranha': ['(  )'] + ([Key('left')] * 2),
 
     # termmnal
     'pseudo': 'sudo ',
