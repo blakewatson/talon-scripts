@@ -53,7 +53,7 @@ ctx.keymap({
     'special': '§',
 
     # navigation
-    'last window': Key('cmd-tab'),
+    'flask': Key('cmd-tab'),
     'alley': Key('alt-space'),
     'clipper': Key('alt-cmd-c'),
 
