@@ -48,6 +48,7 @@ ctx.keymap({
     'start paragraph': [Key('enter')] * 2,
     'clap': Key('cmd-right'),
     'klapper | clapper': Key('cmd-left'),
+    'emoticon': Key('ctrl-cmd-space'),
 
     # used for textexpander
     'special': '§',
