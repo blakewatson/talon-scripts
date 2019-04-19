@@ -108,7 +108,7 @@ def copy_bundle(m):
 
 ctx = Context('input')
 ctx.keymap({
-    'say <dgndictation> [over]': text,
+    'speak <dgndictation> [over]': text,
 
     'sentence <dgndictation> [over]': sentence_text,
     'comma <dgndictation> [over]': [', ', text],
