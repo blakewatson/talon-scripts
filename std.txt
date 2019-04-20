@@ -107,7 +107,7 @@ def copy_bundle(m):
     app.notify('Copied app bundle', body='{}'.format(bundle))
 
 ctx = Context('input')
-ctx.keymap({
+""" ctx.keymap({
     'speak <dgndictation> [over]': text,
 
     'sentence <dgndictation> [over]': sentence_text,
@@ -198,4 +198,4 @@ ctx.keymap({
 
     'scroll down': [Key('down')] * 8,
     'scroll up': [Key('up')] * 8,
-})
+}) """

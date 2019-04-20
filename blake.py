@@ -72,8 +72,8 @@ ctx.keymap({
     'down (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
 
     # code
-    'state far': 'var ',
-    'op arrow': ' => ',
+    # 'state far': 'var ',
+    # 'op arrow': ' => ',
     'indent': Key('cmd-]'),
     'outdent': Key('cmd-['),
     'terminate': [Key('cmd-right'), ';'],
