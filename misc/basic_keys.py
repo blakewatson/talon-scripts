@@ -2,7 +2,7 @@ from talon.voice import Context, press, Key
 import string
 from ..utils import normalise_keys, insert
 
-alpha_alt = "air bat cap drum each faint gust harp sit jury crunch look made near odd pit queen red sun trap urge vest wet plex yellow zoo".split()
+alpha_alt = "air bill cap drum each faint gust harp sit jury crunch look made near odd pink queen red sun trap urge vest wet plex yellow zoo".split()
 alphabet = dict(zip(alpha_alt, string.ascii_lowercase))
 
 f_keys = {f"F {i}": f"f{i}" for i in range(1, 13)}
