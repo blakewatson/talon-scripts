@@ -65,7 +65,7 @@ surrounders = normalise_keys(
         "(string | posh)": (False, surround("'")),
         "(tics | glitch)": (False, surround("`")),
         "padded": (False, surround(" ")),
-        "dunder": (False, surround("__")),
+        #"dunder": (False, surround("__")),
         "angler": (False, surround("<", ">")),
         "brax": (False, surround("[", "]")),
         "kirk": (False, surround("{", "}")),
