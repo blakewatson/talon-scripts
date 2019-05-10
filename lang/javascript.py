@@ -31,6 +31,7 @@ context.keymap(
     {
         "const [<dgndictation>]": ["const ", text],
         "let [<dgndictation>]": ["let ", text],
+        "far [<dgndictation>]": ["far ", text],
         "static": "static ",
         "args": ["()", Key("left")],
         "index": ["[]", Key("left")],
@@ -41,12 +42,12 @@ context.keymap(
         "state func": "function ",
         "state return": "return ",
         "state constructor": "constructor ",
-        "state if": ["if ()", Key("left")],
+        "state if": ["if()", Key("left")],
         "state else": " else ",
-        "state else if": [" else if ()", Key("left")],
-        "state while": ["while ()", Key("left")],
-        "state for": ["for ()", Key("left")],
-        "state switch": ["switch ()", Key("left")],
+        "state else if": [" else if()", Key("left")],
+        "state while": ["while()", Key("left")],
+        "state for": ["for()", Key("left")],
+        "state switch": ["switch()", Key("left")],
         "state case": ["case \nbreak;", Key("up")],
         "state goto": "goto ",
         "state important": "import ",
@@ -78,43 +79,6 @@ context.keymap(
         "op and": " && ",
         "op or": " || ",
         # utility snippets
-        "log": "log",
-        "log error": "logE",
-        "log object": "logD",
-        "axe": "ImportAxios",
-        "require": "requireMOD",
-        # commands for express
-        "express import": "ImportExpress",
-        "express initialize": "InitializeApplication",
-        "expressive initialize": "InitializeRouter",
-        "expressive use": "ExpressRouterUse",
-        "express use": "ExpressApplicationUse",
-        "express callback": "ExpressRouteCb",
-        "expressive route": "RouterRoute",
-        "express route": "ApplicationRoute",
-        # commands for sequelize
-        "model import": "ImportDB",
-        "model initialize": "DBInit",
-        "model equalize": "Sequelize",
-        "model nag": "allowNull",
-        # commands for react
-        "react import": "ImportReact",
-        "react tag": ["< />", Key("left left left")],
-        "react clack": "onClick",
-        # need to add snippets for components
-        "react component": ["React.Component ", Key("left")],
-        # commands for react dom
-        "document import": "ImportDOM",
-        "document import hash": "ImportHash",
-        "document import browser": "ImportBrowser",
-        "document render": ["ReactDOM.render()", Key("left")],
-        # commands for redux
-        "store import": "ImportRedux",
-        "store logger": "ImportLogger",
-        "store think": "ImportThunk",
-        "store combine": "ImportReducers",
-        "store create": "MakeStore",
-        # commands for react-redux
-        "combo provider": "ImportProvider",
+        "log": "log"
     }
 )
