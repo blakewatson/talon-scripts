@@ -31,7 +31,7 @@ context.keymap(
     {
         "const [<dgndictation>]": ["const ", text],
         "let [<dgndictation>]": ["let ", text],
-        "far [<dgndictation>]": ["far ", text],
+        "far [<dgndictation>]": ["var ", text],
         "static": "static ",
         "args": ["()", Key("left")],
         "index": ["[]", Key("left")],
