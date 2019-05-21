@@ -60,21 +60,7 @@ ctx.keymap(
         "coalgap": ": ",
         "[forward] slasher": "// ",
         # Statements
-        "state (def | deaf | deft)": "def ",
-        "state if": "if ",
-        "state else if": [" else if ()", Key("left")],
-        "state while": ["while ()", Key("left")],
-        "state for": "for ",
-        "state switch": ["switch ()", Key("left")],
-        "state case": ["case \nbreak;", Key("up")],
         # Other Keywords
-        "const": "const ",
-        "static": "static ",
-        "tip pent": "int ",
-        "tip char": "char ",
-        "tip byte": "byte ",
-        "tip float": "float ",
-        "tip double": "double ",
         # Comments
         "comment see": "// ",
         "comment py": "# ",
