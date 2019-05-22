@@ -9,7 +9,7 @@ from ...utils import insert
 lag = 0.2
 using_tridactyl = False
 using_vimium = True
-BROWSERS = ["com.google.Chrome", "org.mozilla.firefox"]
+BROWSERS = ["com.google.Chrome", "org.mozilla.firefox", "com.brave.Browser"]
 
 
 def get_url(win=None):
