@@ -1,3 +1,4 @@
+from talon import tap, voice
 from talon.voice import Context, ContextGroup
 from talon.engine import engine
 from talon_plugins import speech
@@ -49,6 +50,12 @@ def set_voice_type(type):
         # Without postponing this "go to sleep" will be printed
         dictation_group.enable()
 
+# toggle button
+def on_key(typ, e):
+   if e == 'alt-ctrl-f12' and e.down:
+        speech.set_enabled(not voice.talon.enabled)
+        e.block()
+tap.register(tap.KEY|tap.HOOK, on_key)
 
 sleepy.keymap(
     {
