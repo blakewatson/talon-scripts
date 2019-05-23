@@ -61,8 +61,8 @@ formatters = normalise_keys(
 
 surrounders = normalise_keys(
     {
-        "(dubstring | coif)": (False, surround('"')),
-        "(string | posh)": (False, surround("'")),
+        #"(dubstring | coif)": (False, surround('"')),
+        #"(string | posh)": (False, surround("'")),
         "(tics | glitch)": (False, surround("`")),
         "padded": (False, surround(" ")),
         #"dunder": (False, surround("__")),
@@ -74,7 +74,7 @@ surrounders = normalise_keys(
     }
 )
 
-formatters.update(surrounders)
+#formatters.update(surrounders)
 
 
 def FormatText(m):
