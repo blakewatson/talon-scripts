@@ -34,6 +34,7 @@ context.keymap(
         "far [<dgndictation>]": ["var ", text],
         "static": "static ",
         "block": [" {}", Key("left enter")],
+        "state var | far": "var ",
         "state func": "function ",
         "state return": "return ",
         "state constructor": "constructor ",
