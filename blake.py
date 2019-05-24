@@ -85,6 +85,7 @@ ctx.keymap({
     'panhandle': ['<?php  ?>'] + ([Key('left')] * 3),
     'echolocation': ['<?=  ?>'] + ([Key('left')] * 3),
     'purana | piranha': ['(  )'] + ([Key('left')] * 2),
+    'spacer': ['  '] + [Key('left')],
 
     # termmnal
     'pseudo': 'sudo ',
@@ -96,5 +97,8 @@ ctx.keymap({
     'get commit <dgndictation>': git_commit,
     'CD': 'cd ',
     'lister': 'ls',
-    'list la': 'ls -la'
+    'list la': 'ls -la',
+
+    # troublesome words
+    'e-mail | e mail': 'email'
 })

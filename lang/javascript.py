@@ -29,12 +29,9 @@ def CursorText(s):
 
 context.keymap(
     {
-        "const [<dgndictation>]": ["const ", text],
-        "let [<dgndictation>]": ["let ", text],
-        "far [<dgndictation>]": ["var ", text],
         "static": "static ",
         "block": [" {}", Key("left enter")],
-        "state var | far": "var ",
+        "state var | state far": "var ",
         "state func": "function ",
         "state return": "return ",
         "state constructor": "constructor ",
