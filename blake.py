@@ -70,6 +70,8 @@ ctx.keymap({
     'up (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
     'right (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
     'down (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
+    'trooper': [Key('up')] * 9,
+    'cooper': [Key('down')] * 9,
 
     # code
     # 'state far': 'var ',
