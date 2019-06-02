@@ -70,6 +70,8 @@ ctx.keymap({
     'up (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
     'right (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
     'down (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': multi_arrow,
+    'trooper': [Key('up')] * 9,
+    'cooper': [Key('down')] * 9,
 
     # code
     # 'state far': 'var ',
@@ -100,5 +102,10 @@ ctx.keymap({
     'list la': 'ls -la',
 
     # troublesome words
-    'e-mail | e mail': 'email'
+    'e-mail | e mail': 'email',
+
+    # controlling spotify with silicio
+    'spot play': Key('ctrl-cmd-shift-p'),
+    'spot last': Key('ctrl-cmd-left'),
+    'spot next': Key('ctrl-cmd-right')
 })

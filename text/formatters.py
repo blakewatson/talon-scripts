@@ -44,7 +44,7 @@ formatters = normalise_keys(
             True,
             lambda i, word, _: "$" + word if i == 0 else word.capitalize(),
         ),
-        "champ": (True, lambda i, word, _: word.capitalize() if i == 0 else " " + word),
+        #"champ": (True, lambda i, word, _: word.capitalize() if i == 0 else " " + word),
         "lowcram": (
             True,
             lambda i, word, _: "@" + word if i == 0 else word.capitalize(),
@@ -63,14 +63,14 @@ surrounders = normalise_keys(
     {
         #"(dubstring | coif)": (False, surround('"')),
         #"(string | posh)": (False, surround("'")),
-        "(tics | glitch)": (False, surround("`")),
-        "padded": (False, surround(" ")),
+        #"(tics | glitch)": (False, surround("`")),
+        #"padded": (False, surround(" ")),
         #"dunder": (False, surround("__")),
-        "angler": (False, surround("<", ">")),
+        #"angler": (False, surround("<", ">")),
         "brax": (False, surround("[", "]")),
-        "kirk": (False, surround("{", "}")),
-        "precoif": (False, surround('("', '")')),
-        "(prex | args)": (False, surround("(", ")")),
+        #"kirk": (False, surround("{", "}")),
+        #"precoif": (False, surround('("', '")')),
+        #"(prex | args)": (False, surround("(", ")")),
     }
 )
 
