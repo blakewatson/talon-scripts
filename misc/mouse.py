@@ -88,6 +88,7 @@ def mouse_release(m):
 keymap = {
     # jsc modified with some voice-code compatibility
     "righty": delayed_right_click,
+    "escort": delayed_right_click,
     "(click | chiff)": delayed_click,
     "(dubclick | duke)": delayed_dubclick,
     "(tripclick | triplick)": delayed_tripclick,
