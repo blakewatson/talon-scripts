@@ -102,5 +102,10 @@ ctx.keymap({
     'list la': 'ls -la',
 
     # troublesome words
-    'e-mail | e mail': 'email'
+    'e-mail | e mail': 'email',
+
+    # controlling spotify with silicio
+    'spot play': Key('ctrl-cmd-shift-p'),
+    'spot last': Key('ctrl-cmd-left'),
+    'spot next': Key('ctrl-cmd-right')
 })
