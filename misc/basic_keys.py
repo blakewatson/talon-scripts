@@ -122,8 +122,7 @@ ctx.keymap(
         "{basic_keys.modifiers}* {basic_keys.keys}+": press_keys,
         "(go | {basic_keys.modifiers}+) {basic_keys.arrows}+": press_keys,
         "number {basic_keys.digits}+ [over]": press_keys,
-        "tarsh": Key("shift-tab"),
-        "tarpy": [Key("tab"), Key("tab")],
+        "tarsh": Key("shift-tab")
     }
 )
 ctx.set_list("alphabet", alphabet.keys())
