@@ -42,7 +42,7 @@ ctx.keymap(
         "(op | logical | bitwise) (ex | exclusive) or equals": " ^= ",
         "[(op | logical | bitwise)] (left shift | shift left) equals": " <<= ",
         "[(op | logical | bitwise)] (right shift | shift right) equals": " >>= ",
-        "[op] (arrow | lambo)": " -> ",
+        "[op] (arrow | lambo)": "->",
         "[op] fat (arrow | lambo)": " => ",
         # Completed matchables
         "(empty parens | call)": "()",
