@@ -1,4 +1,5 @@
 from talon.voice import Context, press, Key
+from talon import ctrl
 import string
 from ..utils import normalise_keys, insert
 
@@ -107,10 +108,10 @@ def press_keys(m):
         return uppercase_letters(m)
 
     if mods:
-        press("-".join(mods + [keys[0]]))
+        press("-".join(mods + [keys[0]]), hold=32000)
         keys = keys[1:]
     for k in keys:
-        press(k)
+        press(k, hold=32000)
 
 
 ctx = Context("basic_keys")
