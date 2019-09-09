@@ -14,7 +14,7 @@ ctx.keymap(
         "(op (plus | add) | deplush)": " + ",
         "(op (times | multiply))": " * ",
         "(op divide | divy)": " / ",
-        "([(op | is)] exactly (equal [to] | equals) | triple equals | trickle)": " === ",
+        "([(op | is)] exactly (equal [to] | equals) | triple equals)": " === ",
         "([(op | is)] not exactly (equal [to] | equals) | ranqual | nockle)": " !== ",
         "(op (power | exponent) | to the power [of])": " ** ",
         "op and": " && ",
