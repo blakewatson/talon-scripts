@@ -1,32 +1,48 @@
-# originally from https://github.com/JonathanNickerson/talon_voice_user_scripts
-# and https://github.com/pimentel/talon_user/blob/master/repeat.py
+"""
+This module contains generic repeat commands that can be used following any
+other command, e.g. "go down" or "delete" x many times. The repeat commands are
+the ordinal representation of the total number of times to execute the
+command, so "go down 4th" will go down 4 times.
 
-from talon.voice import Context, Rep, RepPhrase, talon
-from .. import utils
+A few reasons to use ordinals:
+- Regular numbers are already heavily used
+- Made up words are difficult to learn and remember
+- Ordinals don't need to be memorized
+- Ordinals are not likely to collide with other commands
+"""
+from talon.voice import Context, Rep, talon
 
 ctx = Context("repeater")
 
+ordinals = {}
+
+
+def ordinal(n):
+    """
+    Convert an integer into its ordinal representation::
+        ordinal(0)   => '0th'
+        ordinal(3)   => '3rd'
+        ordinal(122) => '122nd'
+        ordinal(213) => '213th'
+    """
+    n = int(n)
+    suffix = ["th", "st", "nd", "rd", "th"][min(n % 10, 4)]
+    if 11 <= (n % 100) <= 13:
+        suffix = "th"
+    return str(n) + suffix
+
+
+for n in range(2, 100):
+    ordinals[ordinal(n)] = n - 1
+
+ctx.set_list("ordinals", ordinals.keys())
+
 
 def repeat(m):
-    # TODO: This could be made more intelligent:
-    #         * Apply a timeout after which the command will not repeat previous actions
-    #         * Prevent stacking of repetitions upon previous repetitions
-    repeat_count = utils.extract_num_from_m(m)
-
-    if repeat_count is not None and repeat_count >= 2:
-        repeater = Rep(repeat_count - 1)
-        repeater.ctx = talon
-        return repeater(None)
+    o = m["repeater.ordinals"][0]
+    repeater = Rep(int(ordinals[o]))
+    repeater.ctx = talon
+    return repeater(None)
 
 
-ctx.keymap(
-    {
-        "wink": Rep(1),
-        "creek": RepPhrase(1),
-        "soup": Rep(2),
-        "trace": Rep(3),
-        "quarr": Rep(4),
-        "fypes": Rep(5),
-        "(repeat | repple)" + utils.numerals: repeat,
-    }
-)
+ctx.keymap({"{repeater.ordinals}": repeat})
