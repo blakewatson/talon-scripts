@@ -10,6 +10,7 @@ ctx = Context("VSCode", bundle="com.microsoft.VSCode")
 ctx.keymap({
     '(lineup | line up)': Key('alt-up'),
     'line down': Key('alt-down'),
+    'expand': Key('ctrl-e'),
     'add cursors': Key('alt-shift-i'),
     'grab next': Key('cmd-d'),
     'grab all': Key('shift-cmd-l'),
