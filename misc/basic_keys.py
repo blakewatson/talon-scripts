@@ -17,7 +17,7 @@ simple_keys = normalise_keys(
         "( backspace | junk )": "backspace",
         "(delete | forward delete | scrap | spunk)": "delete",
         "(space | skoosh | next)": "space",
-        "(tab | tarp)": "tab",
+        "(tab)": "tab",
         "( enter | shock )": "enter",
         "( escape | randall )": "escape",
         "home": "home",

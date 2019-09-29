@@ -55,7 +55,38 @@ def key_up(m):
 ctx.keymap({
     'walker': key_down,
     'backer': key_down,
-    'stopper': key_up
+    'stopper': key_up,
+    # pet
+    'pet attack | pit attack': Key('ctrl-1'),
+    'pet follow': Key('ctrl-2'),
+    'pet stay': Key('ctrl-3'),
+    'pet growl': Key('ctrl-4'),
+    'pet aggressive': Key('ctrl-8'),
+    'pet defend': Key('ctrl-9'),
+    'pet passive': Key('ctrl-0'),
+    # secondary pet controls
+    'heal pet | heal pit | hill pit | hill pet': Key('ctrl-a'),
+    'revive pet | revive pit': Key('ctrl-b'),
+    'call pet | call pit | pullpit': Key('ctrl-c'),
+    'dismiss pet | dismiss pit': Key('ctrl-d'),
+    # attacks
+    'target': Key('shift-a'),
+    'me attack': Key('shift-b'),
+    'raptor': Key('shift-c'),
+    'shooter': Key('shift-d'),
+    'fury': Key('shift-e'),
+    'mark': Key('shift-f'),
+    'follow': Key('shift-g'),
+    'arcane': Key('shift-h'),
+    'concussive': Key('shift-i'),
+    'wing clip': Key('shift-j'),
+    'serpent': Key('shift-k'),
+    'distracting': Key('shift-l'),
+    # secondary controls
+    'trade beasts': Key('shift-m'),
+    'trade humanoids': Key('shift-n'),
+    'aspect of the hawk': Key('shift-r'),
+    'aspect of the monkey': Key('shift-x')
 })
 
 """ 'attack (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': hold_key,

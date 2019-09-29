@@ -190,9 +190,9 @@ ctx.keymap(
         "(undo it | dizzle)": Key("cmd-z"),
         "(redo it | rizzle)": Key("cmd-shift-z"),
         # clipboard
-        "(clip cut | snatch)": Key("cmd-x"),
-        "(clip copy | stoosh)": Key("cmd-c"),
-        "(clip paste | spark)": Key("cmd-v"),
+        "(clip cut)": Key("cmd-x"),
+        "(clip copy)": Key("cmd-c"),
+        "(clip paste)": Key("cmd-v"),
         # motions
         "(go word left | fame | peg)": Key("alt-left"),
         "(go word right | fish | fran)": Key("alt-right"),
@@ -209,17 +209,13 @@ ctx.keymap(
         ),
         # deleting
         "(delete around this | slurp)": Key("backspace delete"),
-        "(delete line left | snip left | snipple)": Key("shift-cmd-left delete"),
-        "(delete line right | snip right | snipper)": Key("shift-cmd-right delete"),
-        "(delete [this] line)": Key("shift-cmd-right delete delete ctrl-a cmd-left"),
-        "(delete word left | trough | steffi | carmex)": Key("alt-backspace"),
-        "(delete word right | stippy | kite)": Key("alt-delete"),
-        "(delete [this] word | slurpies)": Key("alt-backspace alt-delete"),
+        "delete word left": Key("alt-backspace"),
+        "delete word right": Key("alt-delete"),
+        "delete [this] word": Key("alt-backspace alt-delete"),
         # selecting
         "(select find right | crew) <dgndictation>": select_text_to_right_of_cursor,
         "(select find left | trail) <dgndictation>": select_text_to_left_of_cursor,
         "(select this word | word this)": Key("alt-right shift-alt-left"),
-        "(select this line | shackle)": Key("cmd-right shift-cmd-left"),
         "(select above | shift home)": Key("shift-home"),
         "(select up)": Key("shift-up"),
         "(select down)": Key("shift-down"),
