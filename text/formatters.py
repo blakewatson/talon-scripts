@@ -114,14 +114,14 @@ ctx = Context("formatters")
 
 ctx.keymap(
     {
-        "(phrase | say) <dgndictation> [over]": text,
-        "more <dgndictation> [over]": [" ", spoken_text],
-        "speak <dgndictation> [over]": spoken_text,
-        "sentence <dgndictation> [over]": sentence_text,
+        "(phrase | say) <dgndictation>++ [over]": text,
+        "more <dgndictation>++ [over]": [" ", spoken_text],
+        "speak <dgndictation>++ [over]": spoken_text,
+        "sentence <dgndictation>++ [over]": sentence_text,
         "(comma | ,) <dgndictation> [over]": [", ", spoken_text],
         "period <dgndictation> [over]": [". ", sentence_text],
-        "word <dgnwords>": word,
-        "(%s)+ [<dgndictation>] [over]" % (" | ".join(formatters)): FormatText,
+        "word <dgnwords>++": word,
+        "(%s)+ [<dgndictation>++] [over]" % (" | ".join(formatters)): FormatText,
         # to match surrounder command + another command (i.e. not dgndictation)
         "(%s)+" % (" | ".join(surrounders)): FormatText,
     }
