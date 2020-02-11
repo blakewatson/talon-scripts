@@ -186,7 +186,7 @@ def word_prev(m, valid_characters=alphanumeric):
 ctx.keymap(
     {
         # meta
-        "(save it | sage)": Key("cmd-s"),
+        "(save it)": Key("cmd-s"),
         "(undo it | dizzle)": Key("cmd-z"),
         "(redo it | rizzle)": Key("cmd-shift-z"),
         # clipboard
@@ -213,18 +213,14 @@ ctx.keymap(
         "delete word right": Key("alt-delete"),
         "delete [this] word": Key("alt-backspace alt-delete"),
         # selecting
-        "(select find right | crew) <dgndictation>": select_text_to_right_of_cursor,
-        "(select find left | trail) <dgndictation>": select_text_to_left_of_cursor,
         "(select this word | word this)": Key("alt-right shift-alt-left"),
         "(select above | shift home)": Key("shift-home"),
         "(select up)": Key("shift-up"),
         "(select down)": Key("shift-down"),
-        "(select all | olly | ali)": Key("cmd-a"),
+        "(select all)": Key("cmd-a"),
         "(select left | shlicky)": Key("shift-left"),
         "(select right | shricky)": Key("shift-right"),
         "(select word number {generic_editor.n}* above | wordpreev {generic_editor.n}*)": word_prev,
-        "big word preev {generic_editor.n}*": big_word_prev,
-        "big word neck {generic_editor.n}*": big_word_neck,
         "(select word number {generic_editor.n}* below | wordneck {generic_editor.n}*)": word_neck,
         "(select word left | scram)": Key("alt-shift-left"),
         "(select word right | scrish)": Key("alt-shift-right"),
