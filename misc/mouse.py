@@ -56,6 +56,10 @@ def command_click(m, button=0, times=1):
     press_key_and_click(m, "cmd", button, times)
 
 
+def option_click(m, button=0, times=1):
+    press_key_and_click(m, "alt", button, times)
+
+
 def delayed_right_click(m):
     delayed_click(m, button=1)
 
@@ -95,10 +99,11 @@ keymap = {
     "drag": mouse_drag,
     "release": mouse_release,
     # jsc added
-    "(shift click | shicks)": shift_click,
-    "(command click | chom lick)": command_click,
-    "wheel down": mouse_scroll(200),
-    "wheel up": mouse_scroll(-200),
+    "(shift click)": shift_click,
+    "(command click)": command_click,
+    "option click": option_click,
+    "wheel down": mouse_scroll(300),
+    "wheel up": mouse_scroll(-300),
 }
 
 ctx.keymap(keymap)
