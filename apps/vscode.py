@@ -17,6 +17,6 @@ ctx.keymap({
     'master': Key('shift-cmd-p'),
     'gopreev': Key('cmd-shift-['),
     'gonext': Key('cmd-shift-]'),
-    'jump tab (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': jump_tab,
+    'go tab (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': jump_tab,
     'console log': 'console.log('
 })
