@@ -10,7 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-JS_EXTENSIONS = (".js", ".jsx")
+JS_EXTENSIONS = (".js", ".jsx", ".vue")
 
 context = Context("javascript", func=is_filetype(JS_EXTENSIONS))
 
@@ -51,7 +51,7 @@ context.keymap(
         "word no": "null",
         "arrow": " => ",
         "assign": " = ",
-        "asink": " async ",
+        "asink": "async",
         "op (minus | subtract)": " - ",
         "op (plus | add)": " + ",
         "op (times | multiply)": " * ",
