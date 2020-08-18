@@ -10,7 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-JS_EXTENSIONS = (".js", ".jsx", ".vue")
+JS_EXTENSIONS = (".js", ".jsx", ".vue", ".ts")
 
 context = Context("javascript", func=is_filetype(JS_EXTENSIONS))
 
@@ -48,7 +48,7 @@ context.keymap(
         "state extends": "extends ",
         "state super": "super",
         "comment js": "// ",
-        "word no": "null",
+        "nolan": "null",
         "arrow": " => ",
         "assign": " = ",
         "asink": "async",
