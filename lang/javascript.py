@@ -49,7 +49,6 @@ context.keymap(
         "state super": "super",
         "comment js": "// ",
         "nolan": "null",
-        "arrow": " => ",
         "assign": " = ",
         "asink": "async",
         "op (minus | subtract)": " - ",
