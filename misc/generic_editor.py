@@ -204,7 +204,7 @@ ctx.keymap(
         "([insert] line break | sky turn)": Key("shift-enter"),
         "([insert] new line below | slap)": Key("cmd-right enter"),
         "([insert] new line above | shocker)": Key("ctrl-a cmd-left enter up"),
-        "([insert] duplicate line | jolt)": Key(
+        "([insert] duplicate line)": Key(
             "ctrl-a cmd-left shift-down cmd-c down cmd-v"
         ),
         # deleting
