@@ -1,4 +1,5 @@
 from talon.voice import Context, Key, press
+from talon import app, clip, ui
 from .utils import parse_words, join_words, insert, parse_words_as_integer
 
 ctx = Context('blake')
@@ -107,5 +108,8 @@ ctx.keymap({
     # controlling spotify with silicio
     'spot play': Key('ctrl-cmd-shift-p'),
     'spot last': Key('ctrl-cmd-left'),
-    'spot next': Key('ctrl-cmd-right')
+    'spot next': Key('ctrl-cmd-right'),
+
+    # get the current bundle id
+    'talon get bundle': clip.set(ui.active_app().bundle)
 })
