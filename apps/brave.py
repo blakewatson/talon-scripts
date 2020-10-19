@@ -91,11 +91,6 @@ def jump_tab(m):
     if tab_number is not None and tab_number > 0 and tab_number < 9:
         press("cmd-%s" % tab_number)
 
-
-def mendeley(m):
-    navigate_to_url(f"https://www.mendeley.com/import/?url={get_url()}")
-
-
 webpages = utils.load_config_json("webpages.json")
 
 
@@ -146,8 +141,6 @@ context.keymap(
         "copy": Key("cmd-c"),
         "paste": Key("cmd-v"),
         "paste same style": Key("cmd-alt-shift-v"),
-        # "mendeley": Key("cmd-shift-m"),
-        "(add | save) to mendeley": mendeley,
         # TODO: this should probably be specific to the page
         "submit": Key("cmd-enter"),
         # zotero

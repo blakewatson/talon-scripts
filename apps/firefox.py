@@ -97,7 +97,6 @@ ctx.keymap(
         "paste": Key("cmd-v"),
         "paste same style": Key("cmd-alt-shift-v"),
         # extensions
-        "mendeley": Key("cmd-shift-m"),
         # TODO: this should probably bem specific to the page
         "submit": Key("cmd-enter"),
         # t
