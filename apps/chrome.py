@@ -10,7 +10,7 @@ from talon.voice import Context, Key, Str, press
 # It is recommended to use this script in tandem with Vimium, a Google Chrome plugin for controlling the browser via keyboard
 # https://vimium.github.io/
 
-context = Context("Edge", bundle="com.google.Chrome")
+context = Context("Chrome", bundle="com.google.Chrome")
 
 def get_url(win=None):
     if win is None:
