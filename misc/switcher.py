@@ -46,14 +46,13 @@ ctx.keymap(
         "focus {switcher.running}": switch_app,
         "launch {switcher.launch}": launch_app,
         # custom switchers here
-        "madam": lambda x: switch_app(x, "Atom"),
+        "coder": lambda x: switch_app(x, "Code"),
         "fox chrome": lambda x: switch_app(x, "Google Chrome"),
-        "fox outlook": lambda x: switch_app(x, "Outlook"),
+        "foxer": lambda x: switch_app(x, "Firefox"),
+        "fox edge": lambda x: switch_app(x, "Microsoft Edge"),
         "fox slack": lambda x: switch_app(x, "Slack"),
         "fox iterm": lambda x: switch_app(x, "iTerm2"),
         "fox term": lambda x: switch_app(x, "iTerm2"),
-        "fox skype": lambda x: switch_app(x, "Skype for Business"),
-        "fox signal": lambda x: switch_app(x, "Signal"),
         "system preferences": lambda x: switch_app(x, "System Preferences"),
     }
 )
