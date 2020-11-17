@@ -9,6 +9,11 @@ def git_commit(m):
     text = 'git commit -m "%s"' % message
     insert(text)
 
+def npm_run(m):
+    message = join_words(parse_words(m)).lower()
+    text = 'npm run %s' % message
+    insert(text)
+
 def multi_arrow(m):
     times = parse_words_as_integer(m._words[1:])
     if times > 0 and times < 10:
@@ -101,6 +106,7 @@ ctx.keymap({
     'CD': 'cd ',
     'lister': 'ls',
     'list la': 'ls -la',
+    'runner <dgndictation>': npm_run,
 
     # troublesome words
     'e-mail | e mail': 'email',
