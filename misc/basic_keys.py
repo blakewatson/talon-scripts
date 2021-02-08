@@ -10,16 +10,16 @@ f_keys = {f"F {i}": f"f{i}" for i in range(1, 13)}
 
 simple_keys = normalise_keys(
     {
-        "(crimp | lloyd)": "left",
+        "lloyd": "left",
         "chris": "right",
         "jeep": "up",
         "( dune | doom )": "down",
         "( backspace | junk )": "backspace",
-        "(delete | forward delete | scrap | spunk)": "delete",
+        "(delete | forward delete)": "delete",
         "(space | skoosh | next)": "space",
         "(tab)": "tab",
         "( enter | shock )": "enter",
-        "( escape | randall )": "escape",
+        "( escape )": "escape",
         "home": "home",
         "pagedown": "pagedown",
         "pageup": "pageup",
