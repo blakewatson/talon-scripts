@@ -20,5 +20,6 @@ ctx.keymap({
     'gonext': Key('cmd-shift-]'),
     'sidebar': Key('ctrl-cmd-b'),
     'go tab (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)': jump_tab,
+    'close tab': Key('cmd-w'),
     'console log': 'console.log('
 })
