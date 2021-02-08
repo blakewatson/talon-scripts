@@ -94,7 +94,7 @@ keymap = {
     "righty": delayed_right_click,
     "escort": delayed_right_click,
     "click": delayed_click,
-    "dubclick": delayed_dubclick,
+    "dubclick | double click": delayed_dubclick,
     "(tripclick | triplick)": delayed_tripclick,
     "drag": mouse_drag,
     "release": mouse_release,
@@ -102,8 +102,8 @@ keymap = {
     "(shift click)": shift_click,
     "(command click)": command_click,
     "option click": option_click,
-    "wheel down": mouse_scroll(300),
-    "wheel up": mouse_scroll(-300),
+    "wheel down | dealer": mouse_scroll(300),
+    "wheel up | wheeler": mouse_scroll(-300),
 }
 
 ctx.keymap(keymap)
