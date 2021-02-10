@@ -46,6 +46,7 @@ ctx.keymap(
         "focus {switcher.running}": switch_app,
         "launch {switcher.launch}": launch_app,
         # custom switchers here
+        "beaver": lambda x: switch_app(x, "Brave"),
         "coder": lambda x: switch_app(x, "Code"),
         "crummy": lambda x: switch_app(x, "Google Chrome"),
         "foxer": lambda x: switch_app(x, "Firefox"),
