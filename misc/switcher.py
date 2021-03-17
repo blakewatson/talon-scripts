@@ -52,6 +52,7 @@ ctx.keymap(
         "foxer": lambda x: switch_app(x, "Firefox"),
         "nova": lambda x: switch_app(x, "Nova"),
         "terminal": lambda x: switch_app(x, "iTerm2"),
+        "tutor": lambda x: switch_app(x, "Tot"),
         "system preferences": lambda x: switch_app(x, "System Preferences"),
     }
 )
