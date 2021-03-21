@@ -23,6 +23,7 @@ clap: key(cmd-right)
 lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
 recksy: key(cmd-shift-right)
+alley: key(alt-space)
 
 ### text manipulation ###
 killer: key(backspace:2)
@@ -30,3 +31,4 @@ killer: key(backspace:2)
 ### dictation ###
 say <phrase>: auto_insert(phrase)
 phrase <phrase>: auto_insert(phrase)
+
