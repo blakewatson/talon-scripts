@@ -7,6 +7,15 @@ paste: key(cmd-v)
 ### app ###
 save it: key(cmd-s)
 flask: key(cmd-tab)
+gopreev: app.tab_previous()
+gonext: app.tab_next()
+
+# app switcher
+focus <user.running_applications>: user.switch_app(running_applications)
+foxer: user.switch_app('Firefox')
+terminal: user.switch_app('iTerm2')
+crummy: user.switch_app('Google Chrome')
+coder: user.switch_app('Code')
 
 ### text navigation ###
 jeep: key(up)

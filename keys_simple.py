@@ -3,7 +3,7 @@ from talon import Module, Context
 # dummy speech engine for testing
 from talon.engines.dummy import DummyEngine
 from talon import speech_system
-speech_system.add_engine(DummyEngine())
+#speech_system.add_engine(DummyEngine())
 
 mod = Module()
 ctx = Context()
@@ -11,7 +11,7 @@ ctx = Context()
 ### ALPHABET ###
 
 # my alphabet
-phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near orange pink queen red sun trap urge vest winner plex yank zoo'
+phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near orange pink queen red sun trap urge vest wet plex yank zoo'
 
 # letters
 letters_string = 'abcdefghijklmnopqrstuvwxyz'
@@ -104,16 +104,17 @@ keys.update({
     "double quote": '"',
 })
 
-### DELETION ###
+### ALTERNATES ###
 
 keys.update({
-    "backspace": "backspace",
-    "delete": "delete",
     "junk": "backspace",
+    "next": "space"
 })
 
 ### OTHER ###
 other_keys = [
+    "backspace",
+    "delete",
     "end",
     "enter",
     "escape",
