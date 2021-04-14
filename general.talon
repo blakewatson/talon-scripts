@@ -16,6 +16,10 @@ save it: key(cmd-s)
 flask: key(cmd-tab)
 gopreev: app.tab_previous()
 gonext: app.tab_next()
+new tab: app.tab_open()
+close tab: app.tab_close()
+action(app.tab_close): key(cmd-w)
+action(app.tab_open): key(cmd-t)
 
 # app switcher
 focus <user.running_applications>: user.switch_app(running_applications)
@@ -39,7 +43,6 @@ clap: key(cmd-right)
 lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
 recksy: key(cmd-shift-right)
-alley: key(alt-space)
 
 ### text manipulation ###
 killer: key(backspace:2)
@@ -48,3 +51,8 @@ killer: key(backspace:2)
 say <phrase>: auto_insert(phrase)
 phrase <phrase>: auto_insert(phrase)
 
+### code ###
+assign:
+  key(space)
+  key('=')
+  key(space)
