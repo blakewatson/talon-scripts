@@ -3,6 +3,13 @@ alley: key(alt-space)
 cut: key(cmd-x)
 copy: key(cmd-c)
 paste: key(cmd-v)
+undo: edit.undo()
+redo: edit.redo()
+action(edit.undo): key(cmd-z)
+action(edit.redo): key(cmd-shift-z)
+search: key(cmd-f)
+# repeater
+<user.ordinal>: core.repeat_command(ordinal-1)
 
 ### app ###
 save it: key(cmd-s)
