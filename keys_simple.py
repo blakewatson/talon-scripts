@@ -104,6 +104,14 @@ keys.update({
     "double quote": '"',
 })
 
+### DELETION ###
+
+keys.update({
+    "backspace": "backspace",
+    "delete": "delete",
+    "junk": "backspace",
+})
+
 ### OTHER ###
 other_keys = [
     "end",
