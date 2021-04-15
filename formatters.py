@@ -8,8 +8,13 @@ def allcaps_formatter(m) -> str:
   'Format the text in allcaps.'
   return str(m).upper()
 
-@mod.capture(rule="<phrase>")
+@mod.capture(rule='<phrase>')
 def camel_case_formatter(m) -> str:
   'Format the text in camel case.'
   print(m)
   return 'camel'
+
+@mod.capture(rule='<phrase>')
+def snake_case_formatter() -> str:
+  'Format the text in snake case.'
+  return 'snake'
