@@ -5,9 +5,13 @@ phrase = ''
 
 def on_phrase(j):
     global phrase
-    phrase = getattr(j["parsed"], "_unmapped", j["phrase"])
-    phrase = " ".join(word.split("\\")[0] for word in phrase)
-    draw_notification.show()
+    try:
+        phrase = getattr(j["parsed"], "_unmapped", j["phrase"])
+        phrase = " ".join(word.split("\\")[0] for word in phrase)
+        draw_notification.show()
+    except KeyError:
+        # do nothing
+        return
 
 #    app.notify(phrase)
 

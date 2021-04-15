@@ -48,8 +48,7 @@ recksy: key(cmd-shift-right)
 killer: key(backspace:2)
 
 ### dictation ###
-say <phrase>: auto_insert(phrase)
-phrase <phrase>: auto_insert(phrase)
+speak <phrase>: auto_insert(phrase)
 
 ### code ###
 assign:
