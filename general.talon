@@ -28,25 +28,6 @@ terminal: user.switch_app('iTerm2')
 crummy: user.switch_app('Google Chrome')
 coder: user.switch_app('Code')
 
-### text navigation ###
-jeep: key(up)
-dune: key(down)
-lloyd: key(left)
-chris: key(right)
-gravel: key(shift-left)
-grabber: key(shift-right)
-peg: key(alt-left)
-fran: key(alt-right)
-scram: key(shift-alt-left)
-scrish: key(shift-alt-right)
-clap: key(cmd-right)
-lefty: key(cmd-left)
-lecksy: key(cmd-shift-left)
-recksy: key(cmd-shift-right)
-
-### text manipulation ###
-killer: key(backspace:2)
-
 ### dictation ###
 speak <phrase>: auto_insert(phrase)
 
