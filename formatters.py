@@ -203,6 +203,11 @@ def kebab_case_formatter(m) -> str:
   return '-'.join(words).lower()
 
 @mod.capture(rule='<phrase>')
+def more_formatter(m) -> str:
+  'Add a space and then normal text'
+  return ' ' + str(m)
+
+@mod.capture(rule='<phrase>')
 def pascal_case_formatter(m) -> str:
   'Format the text in pascal case.'
   words = m.phrase.split(' ')

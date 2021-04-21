@@ -23,8 +23,18 @@ keys = dict(zip(phonetic_alphabet.split(' '), letters_string))
 
 numbers = 'zero one two three four five six seven eight nine'.split(' ')
 numerals = '0123456789'
+number_dict = dict(zip(numbers, numerals))
 
-keys.update(dict(zip(numbers, numerals)))
+keys.update(number_dict)
+
+mod.list('numeral', desc='Number keys')
+
+ctx.lists['self.numeral'] = number_dict
+
+@mod.capture(rule='{self.numeral}')
+def numeral(m) -> str:
+    'A number key'
+    return str(m)
 
 ### ARROWS ###
 

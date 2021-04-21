@@ -4,6 +4,7 @@
 ^camel <user.camel_case_formatter>: auto_insert(camel_case_formatter)
 ^criff <user.pascal_case_formatter>: auto_insert(pascal_case_formatter)
 ^kebab <user.kebab_case_formatter>: auto_insert(kebab_case_formatter)
+^more <user.more_formatter>: auto_insert(more_formatter)
 ^sentence <user.sentence_formatter>: auto_insert(sentence_formatter)
 ^shrink <user.shrink_formatter>: auto_insert(shrink_formatter)
 ^smash <user.smash_formatter>: auto_insert(smash_formatter)

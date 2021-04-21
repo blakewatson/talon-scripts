@@ -19,6 +19,7 @@ gopreev: app.tab_previous()
 gonext: app.tab_next()
 new tab: app.tab_open()
 close tab: app.tab_close()
+go tab <user.numeral>: user.go_to_numbered_tab(numeral)
 action(app.tab_close): key(cmd-w)
 action(app.tab_open): key(cmd-t)
 
