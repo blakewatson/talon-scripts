@@ -11,7 +11,7 @@
 ^title <user.title_case_formatter>: auto_insert(title_case_formatter)
 ^word <user.word_formatter>: auto_insert(word_formatter)
 
-### text navigation ###
+### text navigation and selection ###
 jeep: key(up)
 dune: key(down)
 lloyd: key(left)
@@ -29,6 +29,7 @@ clap: key(cmd-right)
 lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
 recksy: key(cmd-shift-right)
+select all: key(cmd-a)
 
 ### text manipulation ###
 killer: key(backspace:2)

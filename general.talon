@@ -1,5 +1,6 @@
 ### global ###
 alley: key(alt-space)
+clipper: key(alt-cmd-c)
 cut: key(cmd-x)
 copy: key(cmd-c)
 paste: key(cmd-v)
@@ -23,10 +24,11 @@ action(app.tab_open): key(cmd-t)
 
 # app switcher
 focus <user.running_applications>: user.switch_app(running_applications)
+coder: user.switch_app('Code')
+crummy: user.switch_app('Google Chrome')
 foxer: user.switch_app('Firefox')
 terminal: user.switch_app('iTerm2')
-crummy: user.switch_app('Google Chrome')
-coder: user.switch_app('Code')
+tutor: user.switch_app('Tot')
 
 ### dictation ###
 speak <phrase>: auto_insert(phrase)
