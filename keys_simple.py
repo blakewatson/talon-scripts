@@ -38,6 +38,7 @@ def numeral(m) -> str:
 
 ### ARROWS ###
 
+# TODO: don't let these be activated unmodified
 keys.update({
     'up': 'up',
     'down': 'down',

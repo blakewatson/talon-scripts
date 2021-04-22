@@ -1,4 +1,4 @@
-from talon import Context, Module
+from talon import Context, Module, actions, clip
 import pprint
 
 mod = Module()
@@ -177,30 +177,130 @@ shrunken_words = {
     "december": "dec",
 }
 
-@mod.capture(rule='<phrase>')
-def lowercase_formatter(m) -> str:
-  'Format the text in lowercase.'
-  return str(m).lower()
+@mod.action_class
+class Actions:
+  def format_text(formatter: str):
+    'Format existing text.'
+    text = ''
+    
+    text = actions.edit.selected_text()
 
-@mod.capture(rule='<phrase>')
-def allcaps_formatter(m) -> str:
-  'Format the text in allcaps.'
-  return str(m).upper()
+    if formatter == 'camel':
+      text = camel(text)
+    if formatter == 'dotsway':
+      text = dot_join(text)
+    if formatter == 'kebab':
+      text = kebab(text)
+    elif formatter == 'lower':
+      text = lowercase(text)
+    elif formatter == 'pascal':
+      text = pascal(text)
+    elif formatter == 'pathway':
+      text = slash_join(text)
+    elif formatter == 'smash':
+      text = smash(text)
+    elif formatter == 'snake':
+      text = snake(text)
+    elif formatter == 'title':
+      text = title(text)
+    elif formatter == 'upper':
+      text = allcaps(text)
+    
+    actions.auto_insert(text)
 
-@mod.capture(rule='<phrase>')
-def camel_case_formatter(m) -> str:
-  'Format the text in camel case.'
-  words = m.phrase.split(' ')
+mod.list('formatters', desc='A list of text formatters.')
+ctx.lists['self.formatters'] = {
+  'camel': 'camel',
+  'dotsway': 'dotsway',
+  'kebab': 'kebab',
+  'lower': 'lower',
+  'pascal': 'pascal',
+  'pathway': 'pathway',
+  'smash': 'smash',
+  'snake': 'snake',
+  'title': 'title',
+  'upper': 'upper'
+}
+
+def allcaps(s):
+  return s.upper()
+
+def camel(s):
+  words = s.split(' ')
   result = words[0]
   for word in words[1:]:
     result += word.capitalize()
   return result
 
+def dot_join(s):
+  words = s.split(' ')
+  return '.'.join(words).lower()
+
+def kebab(s):
+  words = s.split(' ')
+  return '-'.join(words).lower()
+
+def lowercase(s):
+  return s.lower()
+
+def pascal(s):
+  words = s.split(' ')
+  capitalized_words = []
+  for word in words:
+    capitalized_words.append(word.capitalize())
+  return ''.join(capitalized_words)
+
+def slash_join(s):
+  words = s.split(' ')
+  return '/'.join(words).lower()
+
+def smash(s):
+  return ''.join(s.split(' ')).lower()
+
+def snake(s):
+  words = s.split(' ')
+  return '_'.join(words).lower()
+
+def title(s):
+  words = s.split(' ')
+  title_words = [words[0].capitalize()]
+  for word in words[1:]:
+    if word not in dont_capitalize_these_words:
+      word = word.capitalize()
+    title_words.append(word)
+  return ' '.join(title_words)
+
+@mod.capture(rule='format {self.formatters}')
+def formatters(m) -> str:
+  return str(m.formatters)
+
+@mod.capture(rule='<phrase>')
+def lowercase_formatter(m) -> str:
+  'Format the text in lowercase.'
+  return lowercase(str(m))
+
+@mod.capture(rule='<phrase>')
+def allcaps_formatter(m) -> str:
+  'Format the text in allcaps.'
+  return allcaps(str(m))
+
+@mod.capture(rule='<phrase>')
+def camel_case_formatter(m) -> str:
+  'Format the text in camel case.'
+  return camel(str(m))
+
+@mod.capture(rule='<phrase>')
+def dot_join_formatter(m) -> str:
+  return dot_join(str(m))
+
 @mod.capture(rule='<phrase>')
 def kebab_case_formatter(m) -> str:
   'Format the text in kebab case.'
-  words = m.phrase.split(' ')
-  return '-'.join(words).lower()
+  return kebab(str(m))
+
+@mod.capture(rule='<phrase>')
+def slash_join_formatter(m) -> str:
+  return slash_join(str(m))
 
 @mod.capture(rule='<phrase>')
 def more_formatter(m) -> str:
@@ -210,11 +310,7 @@ def more_formatter(m) -> str:
 @mod.capture(rule='<phrase>')
 def pascal_case_formatter(m) -> str:
   'Format the text in pascal case.'
-  words = m.phrase.split(' ')
-  capitalized_words = []
-  for word in words:
-    capitalized_words.append(word.capitalize())
-  return ''.join(capitalized_words)
+  return pascal(str(m))
 
 @mod.capture(rule='<phrase>')
 def sentence_formatter(m) -> str:
@@ -230,26 +326,24 @@ def shrink_formatter(m) -> str:
   return ''
 
 @mod.capture(rule='<phrase>')
+def slash_join_formatter(m) -> str:
+  'A series of words joined by slashes (like a directory path)'
+  return slash_join(str(m))
+
+@mod.capture(rule='<phrase>')
 def smash_formatter(m) -> str:
   'Concatenate the words and lowercase them.'
-  return ''.join(m.phrase.split(' ')).lower()
+  return smash(str(m))
 
 @mod.capture(rule='<phrase>')
 def snake_case_formatter(m) -> str:
   'Format the text in snake case.'
-  words = m.phrase.split(' ')
-  return '_'.join(words).lower()
+  return snake(str(m))
 
 @mod.capture(rule='<phrase>')
 def title_case_formatter(m) -> str:
   'Capitalize each word.'
-  words = m.phrase.split(' ')
-  title_words = [words[0].capitalize()]
-  for word in words[1:]:
-    if word not in dont_capitalize_these_words:
-      word = word.capitalize()
-    title_words.append(word)
-  return ' '.join(title_words)
+  return title(str(m))
 
 @mod.capture(rule='<word>')
 def word_formatter(m) -> str:
