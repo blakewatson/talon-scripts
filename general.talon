@@ -1,4 +1,6 @@
 ### global ###
+mission: key(ctrl-up)
+apogee: key(ctrl-down)
 alley: key(alt-space)
 clipper: key(alt-cmd-c)
 cut: key(cmd-x)
