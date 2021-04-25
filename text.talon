@@ -12,6 +12,7 @@
 ^smash <user.smash_formatter>: auto_insert(smash_formatter)
 ^snake <user.snake_case_formatter>: auto_insert(snake_case_formatter)
 ^title <user.title_case_formatter>: auto_insert(title_case_formatter)
+<user.slicer_formatter>: auto_insert(slicer_formatter)
 ^word <user.word_formatter>: auto_insert(word_formatter)
 <user.formatters>: user.format_text(formatters)
 
@@ -40,3 +41,5 @@ killer: key(backspace:2)
 slurp:
   key(backspace)
   key(delete)
+indent: edit.indent_more()
+outdent: edit.indent_less()

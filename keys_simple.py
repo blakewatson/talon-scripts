@@ -53,7 +53,7 @@ keys.update({
     # Dragon. Possibly it has been fixed by later improvements to talon? -rntz
     "`": "`",
     ",": ",",  # <== these things
-    "back tick": "`",
+    "tick": "`",
     "comma": ",",
     "period": ".",
     "semi": ";",

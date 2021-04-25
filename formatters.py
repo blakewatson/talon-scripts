@@ -187,9 +187,9 @@ class Actions:
 
     if formatter == 'camel':
       text = camel(text)
-    if formatter == 'dotsway':
+    elif formatter == 'dotsway':
       text = dot_join(text)
-    if formatter == 'kebab':
+    elif formatter == 'kebab':
       text = kebab(text)
     elif formatter == 'lower':
       text = lowercase(text)
@@ -254,6 +254,9 @@ def slash_join(s):
   words = s.split(' ')
   return '/'.join(words).lower()
 
+def slicer(s, num):
+  return s[0:num]
+
 def smash(s):
   return ''.join(s.split(' ')).lower()
 
@@ -272,6 +275,7 @@ def title(s):
 
 @mod.capture(rule='format {self.formatters}')
 def formatters(m) -> str:
+  'Format the selected text with the given formatter.'
   return str(m.formatters)
 
 @mod.capture(rule='<phrase>')
@@ -291,16 +295,13 @@ def camel_case_formatter(m) -> str:
 
 @mod.capture(rule='<phrase>')
 def dot_join_formatter(m) -> str:
+  'A series of words joined by a period.'
   return dot_join(str(m))
 
 @mod.capture(rule='<phrase>')
 def kebab_case_formatter(m) -> str:
   'Format the text in kebab case.'
   return kebab(str(m))
-
-@mod.capture(rule='<phrase>')
-def slash_join_formatter(m) -> str:
-  return slash_join(str(m))
 
 @mod.capture(rule='<phrase>')
 def more_formatter(m) -> str:
@@ -329,6 +330,17 @@ def shrink_formatter(m) -> str:
 def slash_join_formatter(m) -> str:
   'A series of words joined by slashes (like a directory path)'
   return slash_join(str(m))
+
+mod.list('slicers', desc='Shorthand for returning a substring.')
+ctx.lists['self.slicers'] = {
+  'tree': '3',
+  'quad': '4'
+}
+
+@mod.capture(rule='^{self.slicers} <word>')
+def slicer_formatter(m) -> str:
+  'Returns the first n characters of the provided word.'
+  return slicer(m.word, int(m.slicers))
 
 @mod.capture(rule='<phrase>')
 def smash_formatter(m) -> str:
