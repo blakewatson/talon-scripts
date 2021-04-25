@@ -84,6 +84,8 @@ keys.update({
     "backslash": "\\",
     "minus": "-",
     "dash": "-",
+    "bigger dash": "—",
+    "middle dash": "–",
     "equals": "=",
     "plus": "+",
     "tilde": "~",
@@ -116,6 +118,8 @@ keys.update({
     "pipe": "|",
     "dubquote": '"',
     "double quote": '"',
+    "special": "§",
+    "ellipsis": "…"
 })
 
 ### ALTERNATES ###
