@@ -205,6 +205,8 @@ class Actions:
       text = title(text)
     elif formatter == 'upper':
       text = allcaps(text)
+    elif formatter == 'yelsnik':
+      text = allcaps(snake(text))
     
     actions.auto_insert(text)
 
@@ -219,7 +221,8 @@ ctx.lists['self.formatters'] = {
   'smash': 'smash',
   'snake': 'snake',
   'title': 'title',
-  'upper': 'upper'
+  'upper': 'upper',
+  'yelsnik': 'yelsnik'
 }
 
 def allcaps(s):
@@ -361,3 +364,8 @@ def title_case_formatter(m) -> str:
 def word_formatter(m) -> str:
   'Return a single word.'
   return str(m.word)
+
+@mod.capture(rule='<word>+')
+def yelsnik_formatter(m) -> str:
+  'Join all words with an underscore and all caps them.'
+  return allcaps(snake(str(m)))
