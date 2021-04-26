@@ -1,0 +1,3 @@
+mode: sleep
+-
+<phrase>: skip()
