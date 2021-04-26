@@ -1,4 +1,4 @@
 mode: all
 -
-talon wake | wake up: speech.enable()
-talon sleep | go to sleep: speech.disable()
+talon wake | waker: speech.enable()
+talon sleep | sleeper: speech.disable()
