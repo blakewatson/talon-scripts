@@ -338,7 +338,8 @@ def pascal_case_formatter(m) -> str:
 @mod.capture(rule='<phrase>')
 def sentence_formatter(m) -> str:
   'Capitalize the first word in the phrase.'
-  return m.phrase.capitalize()
+  first = str(m)[0].upper()
+  return first + str(m)[1:]
 
 @mod.capture(rule='<word>')
 def shrink_formatter(m) -> str:
