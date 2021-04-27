@@ -93,6 +93,8 @@ keys.update({
     "dollar": "$",
     "down score": "_",
     "under score": "_",
+    "downscore": "_",
+    "underscore": "_",
     "paren": "(",
     "L paren": "(",
     "left paren": "(",
