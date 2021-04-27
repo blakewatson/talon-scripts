@@ -1,4 +1,5 @@
 from talon import Context, Module, actions, clip
+from random import randint
 import pprint
 
 mod = Module()
@@ -201,6 +202,8 @@ class Actions:
       text = smash(text)
     elif formatter == 'snake':
       text = snake(text)
+    elif formatter == 'spongebob':
+      text = spongebob(text)
     elif formatter == 'title':
       text = title(text)
     elif formatter == 'upper':
@@ -220,6 +223,7 @@ ctx.lists['self.formatters'] = {
   'pathway': 'pathway',
   'smash': 'smash',
   'snake': 'snake',
+  'spongebob': 'spongebob',
   'title': 'title',
   'upper': 'upper',
   'yelsnik': 'yelsnik'
@@ -266,6 +270,21 @@ def smash(s):
 def snake(s):
   words = s.split(' ')
   return '_'.join(words).lower()
+
+def spongebob(s):
+  capitalize = bool(randint(0, 1))
+  formatted_string = ''
+  
+  for char in s:
+    if not char.isalpha():
+      formatted_string += char
+    elif capitalize:
+      formatted_string += char.upper()
+    else:
+      formatted_string += char.lower()
+    capitalize = not capitalize
+
+  return formatted_string
 
 def title(s):
   words = s.split(' ')
@@ -354,6 +373,11 @@ def smash_formatter(m) -> str:
 def snake_case_formatter(m) -> str:
   'Format the text in snake case.'
   return snake(str(m))
+
+@mod.capture(rule='<phrase>')
+def spongebob_formatter(m) -> str:
+  'sPoNgEbOb sTyLe tExT.'
+  return spongebob(str(m))
 
 @mod.capture(rule='<phrase>')
 def title_case_formatter(m) -> str:

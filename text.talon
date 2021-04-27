@@ -11,6 +11,7 @@
 ^shrink <user.shrink_formatter>$: auto_insert(shrink_formatter)
 ^smash <user.smash_formatter>$: auto_insert(smash_formatter)
 ^snake <user.snake_case_formatter>$: auto_insert(snake_case_formatter)
+^spongebob <user.spongebob_formatter>$: auto_insert(spongebob_formatter)
 ^title <user.title_case_formatter>$: auto_insert(title_case_formatter)
 <user.slicer_formatter>$: auto_insert(slicer_formatter)
 ^word <user.word_formatter>$: auto_insert(word_formatter)
