@@ -36,16 +36,3 @@ tutor: user.switch_app('Tot')
 
 ### dictation ###
 speak <phrase>: auto_insert(phrase)
-
-### code ###
-assign:
-  key(space)
-  key('=')
-  key(space)
-arrow: key(- >)
-fat arrow: key(space = > space)
-<user.npm_script>: insert(npm_script)
-slasher: key(/ / space)
-block: key(space { enter)
-nolan: insert('null')
-thistle: insert('this')

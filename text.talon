@@ -39,9 +39,26 @@ recksy: key(cmd-shift-right)
 select all: key(cmd-a)
 
 ### text manipulation ###
+slap: key(cmd-right enter)
 killer: key(backspace:2)
 slurp:
   key(backspace)
   key(delete)
 indent: edit.indent_more()
 outdent: edit.indent_less()
+
+### code ###
+assign:
+  key(space)
+  key('=')
+  key(space)
+arrow: key(- >)
+fat arrow: key(space = > space)
+<user.npm_script>: insert(npm_script)
+slasher: key(/ / space)
+block: key(space { enter)
+nolan: insert('null')
+thistle: insert('this')
+sinker:
+  key(cmd-right)
+  key(;)
