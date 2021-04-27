@@ -2,6 +2,7 @@ app: Code
 -
 pallet: key(shift-cmd-p)
 phylum: key(cmd-p)
+action(app.window_open): key(cmd-shift-n)
 
 # tabs
 action(app.tab_previous): key(alt-cmd-left)

@@ -17,6 +17,7 @@ search: key(cmd-f)
 ### app ###
 save it: key(cmd-s)
 flask: key(cmd-tab)
+new window: app.window_open()
 gopreev: app.tab_previous()
 gonext: app.tab_next()
 new tab: app.tab_open()
