@@ -62,3 +62,5 @@ thistle: insert('this')
 sinker:
   key(cmd-right)
   key(;)
+console log: insert('console.log(')
+spaceer: key(space left space)
