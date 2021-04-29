@@ -45,7 +45,7 @@ slurp:
   key(backspace)
   key(delete)
 indent: edit.indent_more()
-outdent: edit.indent_less()
+detdent: edit.indent_less()
 
 ### code ###
 assign:
@@ -64,3 +64,4 @@ sinker:
   key(;)
 console log: insert('console.log(')
 spaceer: key(space left space)
+triple equals: insert(' === ')
