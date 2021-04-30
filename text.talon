@@ -35,7 +35,7 @@ smear:
 clap: key(cmd-right)
 lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
-recksy: key(cmd-shift-right)
+rexy: key(cmd-shift-right)
 select all: key(cmd-a)
 
 ### text manipulation ###
@@ -45,7 +45,7 @@ slurp:
   key(backspace)
   key(delete)
 indent: edit.indent_more()
-detdent: edit.indent_less()
+dedent: edit.indent_less()
 
 ### code ###
 assign:
