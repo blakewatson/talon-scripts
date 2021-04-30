@@ -182,35 +182,8 @@ shrunken_words = {
 class Actions:
   def format_text(formatter: str):
     'Format existing text.'
-    text = ''
-    
     text = actions.edit.selected_text()
-
-    if formatter == 'camel':
-      text = camel(text)
-    elif formatter == 'dotsway':
-      text = dot_join(text)
-    elif formatter == 'kebab':
-      text = kebab(text)
-    elif formatter == 'lower':
-      text = lowercase(text)
-    elif formatter == 'pascal':
-      text = pascal(text)
-    elif formatter == 'pathway':
-      text = slash_join(text)
-    elif formatter == 'smash':
-      text = smash(text)
-    elif formatter == 'snake':
-      text = snake(text)
-    elif formatter == 'spongebob':
-      text = spongebob(text)
-    elif formatter == 'title':
-      text = title(text)
-    elif formatter == 'upper':
-      text = allcaps(text)
-    elif formatter == 'yelsnik':
-      text = allcaps(snake(text))
-    
+    text = format_functions[formatter](text)
     actions.auto_insert(text)
 
 mod.list('formatters', desc='A list of text formatters.')
@@ -221,6 +194,7 @@ ctx.lists['self.formatters'] = {
   'lower': 'lower',
   'pascal': 'pascal',
   'pathway': 'pathway',
+  'say': 'say',
   'smash': 'smash',
   'snake': 'snake',
   'spongebob': 'spongebob',
@@ -295,102 +269,28 @@ def title(s):
     title_words.append(word)
   return ' '.join(title_words)
 
+format_functions = {
+  'camel': lambda s: camel(s),
+  'dotsway': lambda s: dot_join(s),
+  'kebab': lambda s: kebab(s),
+  'lower': lambda s: lowercase(s),
+  'pascal': lambda s: pascal(s),
+  'pathway': lambda s: slash_join(s),
+  'say': lambda s: lowercase(s),
+  'smash': lambda s: smash(s),
+  'snake': lambda s: snake(s),
+  'spongebob': lambda s: spongebob(s),
+  'title': lambda s: title(s),
+  'upper': lambda s: allcaps(s),
+  'yelsnik': lambda s: allcaps(snake(s))
+}
+
 @mod.capture(rule='format {self.formatters}')
 def formatters(m) -> str:
   'Format the selected text with the given formatter.'
   return str(m.formatters)
 
-@mod.capture(rule='<phrase>')
-def lowercase_formatter(m) -> str:
-  'Format the text in lowercase.'
-  return lowercase(str(m))
-
-@mod.capture(rule='<phrase>')
-def allcaps_formatter(m) -> str:
-  'Format the text in allcaps.'
-  return allcaps(str(m))
-
-@mod.capture(rule='<phrase>')
-def camel_case_formatter(m) -> str:
-  'Format the text in camel case.'
-  return camel(str(m))
-
-@mod.capture(rule='<phrase>')
-def dot_join_formatter(m) -> str:
-  'A series of words joined by a period.'
-  return dot_join(str(m))
-
-@mod.capture(rule='<phrase>')
-def kebab_case_formatter(m) -> str:
-  'Format the text in kebab case.'
-  return kebab(str(m))
-
-@mod.capture(rule='<phrase>')
-def more_formatter(m) -> str:
-  'Add a space and then normal text'
-  return ' ' + str(m)
-
-@mod.capture(rule='<phrase>')
-def pascal_case_formatter(m) -> str:
-  'Format the text in pascal case.'
-  return pascal(str(m))
-
-@mod.capture(rule='<phrase>')
-def sentence_formatter(m) -> str:
-  'Capitalize the first word in the phrase.'
-  first = str(m)[0].upper()
-  return first + str(m)[1:]
-
-@mod.capture(rule='<word>')
-def shrink_formatter(m) -> str:
-  'Shrink the word.'
-  word = m.word.lower()
-  if word in shrunken_words:
-    return shrunken_words[word]
-  return ''
-
-@mod.capture(rule='<phrase>')
-def slash_join_formatter(m) -> str:
-  'A series of words joined by slashes (like a directory path)'
-  return slash_join(str(m))
-
-mod.list('slicers', desc='Shorthand for returning a substring.')
-ctx.lists['self.slicers'] = {
-  'tree': '3',
-  'quad': '4'
-}
-
-@mod.capture(rule='^{self.slicers} <word>')
-def slicer_formatter(m) -> str:
-  'Returns the first n characters of the provided word.'
-  return slicer(m.word, int(m.slicers))
-
-@mod.capture(rule='<phrase>')
-def smash_formatter(m) -> str:
-  'Concatenate the words and lowercase them.'
-  return smash(str(m))
-
-@mod.capture(rule='<phrase>')
-def snake_case_formatter(m) -> str:
-  'Format the text in snake case.'
-  return snake(str(m))
-
-@mod.capture(rule='<phrase>')
-def spongebob_formatter(m) -> str:
-  'sPoNgEbOb sTyLe tExT.'
-  return spongebob(str(m))
-
-@mod.capture(rule='<phrase>')
-def title_case_formatter(m) -> str:
-  'Capitalize each word.'
-  return title(str(m))
-
-@mod.capture(rule='<word>')
-def word_formatter(m) -> str:
-  'Return a single word.'
-  return str(m.word)
-
-@mod.capture(rule='<word>+')
-def yelsnik_formatter(m) -> str:
-  'Join all words with an underscore and all caps them.'
-  return allcaps(snake(str(m)))
+@mod.capture(rule='{self.formatters} <phrase>')
+def format(m) -> str:
+  'Format the next spoken text according to the provided formatter.'
+  return format_functions[m.formatters](m.phrase)
