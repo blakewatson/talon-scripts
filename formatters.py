@@ -192,6 +192,7 @@ ctx.lists['self.formatters'] = {
   'dotsway': 'dotsway',
   'kebab': 'kebab',
   'lower': 'lower',
+  'more': 'more',
   'pascal': 'pascal',
   'pathway': 'pathway',
   'say': 'say',
@@ -201,6 +202,12 @@ ctx.lists['self.formatters'] = {
   'title': 'title',
   'upper': 'upper',
   'yelsnik': 'yelsnik'
+}
+
+mod.list('slicers', desc='Shorthand for returning a substring.')
+ctx.lists['self.slicers'] = {
+  'tree': '3',
+  'quad': '4'
 }
 
 def allcaps(s):
@@ -274,6 +281,7 @@ format_functions = {
   'dotsway': lambda s: dot_join(s),
   'kebab': lambda s: kebab(s),
   'lower': lambda s: lowercase(s),
+  'more': lambda s: ' ' + s,
   'pascal': lambda s: pascal(s),
   'pathway': lambda s: slash_join(s),
   'say': lambda s: lowercase(s),
@@ -284,6 +292,24 @@ format_functions = {
   'upper': lambda s: allcaps(s),
   'yelsnik': lambda s: allcaps(snake(s))
 }
+
+@mod.capture(rule='<word>')
+def shrink_formatter(m) -> str:
+  'Shrink the word.'
+  word = m.word.lower()
+  if word in shrunken_words:
+    return shrunken_words[word]
+  return ''
+
+@mod.capture(rule='<word>')
+def word_formatter(m) -> str:
+  'Return a single word.'
+  return str(m.word)
+
+@mod.capture(rule='^{self.slicers} <word>')
+def slicer_formatter(m) -> str:
+  'Returns the first n characters of the provided word.'
+  return slicer(m.word, int(m.slicers))
 
 @mod.capture(rule='format {self.formatters}')
 def formatters(m) -> str:
