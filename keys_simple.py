@@ -153,12 +153,6 @@ ctx.lists['self.modifier_key'] = {
 def modifier_key(m) -> str:
     'A modifier key.'
     return str(m)
-    
-    
-### ARROWS ###
-arrow_keys = ['up', 'down', 'left', 'right']
-mod.list('arrow_key', desc='Arrow keys')
-ctx.lists['self.arrow_key'] = dict(zip(arrow_keys, arrow_keys))
 
 ### KEYS ###
 
@@ -170,10 +164,24 @@ ctx.lists['self.unmodified_key'] = keys
 def unmodified_key(m) -> str:
     'A single unmodified key'
     return str(m)
+        
+### ARROWS ###
+arrow_keys = ['up', 'down', 'left', 'right']
+mod.list('modified_arrow_key', desc='Arrow keys')
+ctx.lists['self.modified_arrow_key'] = dict(zip(arrow_keys, arrow_keys))
+
+@mod.capture(rule='<self.modifier_key>* {self.modified_arrow_key}')
+def modified_arrow_key(m) -> str:
+    'A modified arrow key'
+    try:
+        mods = m.modifier_key_list
+    except AttributeError:
+        mods = []
+    return '-'.join(mods + [m.arrow_key])
 
 # we only allow standard arrow key directional words when modified
 # for unmodified arrow keys, use the commands defined in text.talon (eg, jeep, dune, etc)
-@mod.capture(rule='<self.modifier_key>* (<self.unmodified_key> | {self.arrow_key})')
+@mod.capture(rule='<self.modifier_key>* <self.unmodified_key>')
 def key(m) -> str:
     'A single key with optional modifiers'
     try:
