@@ -36,16 +36,6 @@ def numeral(m) -> str:
     'A number key'
     return str(m)
 
-### ARROWS ###
-
-# TODO: don't let these be activated unmodified
-keys.update({
-    'up': 'up',
-    'down': 'down',
-    'left': 'left',
-    'right': 'right'
-})
-
 ### SPECIAL CHARACTERS ###
 
 keys.update({
@@ -163,7 +153,12 @@ ctx.lists['self.modifier_key'] = {
 def modifier_key(m) -> str:
     'A modifier key.'
     return str(m)
-
+    
+    
+### ARROWS ###
+arrow_keys = ['up', 'down', 'left', 'right']
+mod.list('arrow_key', desc='Arrow keys')
+ctx.lists['self.arrow_key'] = dict(zip(arrow_keys, arrow_keys))
 
 ### KEYS ###
 
@@ -176,11 +171,17 @@ def unmodified_key(m) -> str:
     'A single unmodified key'
     return str(m)
 
-@mod.capture(rule='<self.modifier_key>* <self.unmodified_key>')
+# we only allow standard arrow key directional words when modified
+# for unmodified arrow keys, use the commands defined in text.talon (eg, jeep, dune, etc)
+@mod.capture(rule='<self.modifier_key>* (<self.unmodified_key> | {self.arrow_key})')
 def key(m) -> str:
     'A single key with optional modifiers'
     try:
         mods = m.modifier_key_list
     except AttributeError:
         mods = []
-    return '-'.join(mods + [m.unmodified_key])
+    try:
+        actionable_key = m.unmodified_key
+    except AttributeError:
+        actionable_key = m.arrow_key
+    return '-'.join(mods + [actionable_key])
