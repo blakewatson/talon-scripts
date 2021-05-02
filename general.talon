@@ -28,6 +28,7 @@ action(app.tab_open): key(cmd-t)
 
 # app switcher
 focus <user.running_applications>: user.switch_app(running_applications)
+focus writer: user.switch_app('iA Writer')
 coder: user.switch_app('Code')
 crummy: user.switch_app('Google Chrome')
 foxer: user.switch_app('Firefox')
