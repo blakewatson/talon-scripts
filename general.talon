@@ -31,6 +31,7 @@ focus <user.running_applications>: user.switch_app(running_applications)
 coder: user.switch_app('Code')
 crummy: user.switch_app('Google Chrome')
 foxer: user.switch_app('Firefox')
+nova: user.switch_app('Nova')
 terminal: user.switch_app('iTerm2')
 tutor: user.switch_app('Tot')
 

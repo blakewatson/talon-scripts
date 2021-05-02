@@ -1,4 +1,4 @@
-click: mouse_click()
+touch: mouse_click()
 double click | dubclick:
   mouse_click()
   sleep(0.1)
@@ -6,6 +6,9 @@ double click | dubclick:
 
 # right click
 escort: mouse_click(1)
+
+# middle button click
+middle click | midi: mouse_click(2)
 
 # click with modifiers
 <user.modifier_key> click:
