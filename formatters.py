@@ -196,6 +196,7 @@ ctx.lists['self.formatters'] = {
   'pascal': 'pascal',
   'pathway': 'pathway',
   'say': 'say',
+  'sentence': 'sentence',
   'smash': 'smash',
   'snake': 'snake',
   'spongebob': 'spongebob',
@@ -237,6 +238,11 @@ def pascal(s):
   for word in words:
     capitalized_words.append(word.capitalize())
   return ''.join(capitalized_words)
+
+def sentence(s):
+  text = s[0:1].capitalize()
+  text += s[1:]
+  return text
 
 def slash_join(s):
   words = s.split(' ')
@@ -285,6 +291,7 @@ format_functions = {
   'pascal': lambda s: pascal(s),
   'pathway': lambda s: slash_join(s),
   'say': lambda s: lowercase(s),
+  'sentence': lambda s: sentence(s),
   'smash': lambda s: smash(s),
   'snake': lambda s: snake(s),
   'spongebob': lambda s: spongebob(s),
