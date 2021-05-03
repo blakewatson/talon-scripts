@@ -212,6 +212,21 @@ ctx.lists['self.slicers'] = {
   'quad': '4'
 }
 
+# text replacements - todo: smarter replacement of different formats
+replacements = {
+  'talent': 'talon',
+  'Talent': 'Talon'
+}
+
+replacement_list = [key for key in replacements.keys()]
+
+def replace_words(s):
+  for word in replacement_list:
+    s = s.replace(word, replacements[word])
+  return s
+
+# formatting functions
+
 def allcaps(s):
   return s.upper()
 
@@ -284,21 +299,21 @@ def title(s):
   return ' '.join(title_words)
 
 format_functions = {
-  'camel': lambda s: camel(s),
-  'dotsway': lambda s: dot_join(s),
-  'kebab': lambda s: kebab(s),
-  'lower': lambda s: lowercase(s),
-  'more': lambda s: ' ' + s,
-  'pascal': lambda s: pascal(s),
-  'pathway': lambda s: slash_join(s),
-  'say': lambda s: lowercase(s),
-  'sentence': lambda s: sentence(s),
-  'smash': lambda s: smash(s),
-  'snake': lambda s: snake(s),
-  'spongebob': lambda s: spongebob(s),
-  'title': lambda s: title(s),
-  'upper': lambda s: allcaps(s),
-  'yelsnik': lambda s: allcaps(snake(s))
+  'camel': lambda s: replace_words(camel(s)),
+  'dotsway': lambda s: replace_words(dot_join(s)),
+  'kebab': lambda s: replace_words(kebab(s)),
+  'lower': lambda s: replace_words(lowercase(s)),
+  'more': lambda s: replace_words(' ' + s),
+  'pascal': lambda s: replace_words(pascal(s)),
+  'pathway': lambda s: replace_words(slash_join(s)),
+  'say': lambda s: replace_words(lowercase(s)),
+  'sentence': lambda s: replace_words(sentence(s)),
+  'smash': lambda s: replace_words(smash(s)),
+  'snake': lambda s: replace_words(snake(s)),
+  'spongebob': lambda s: replace_words(spongebob(s)),
+  'title': lambda s: replace_words(title(s)),
+  'upper': lambda s: replace_words(allcaps(s)),
+  'yelsnik': lambda s: replace_words(allcaps(snake(s)))
 }
 
 @mod.capture(rule='<word>')
