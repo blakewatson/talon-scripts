@@ -1,4 +1,5 @@
 ### text formatters ###
+(phrase | speak) <phrase>$: auto_insert(phrase)
 shrink <user.shrink_formatter>$: auto_insert(shrink_formatter)
 word <user.word_formatter>$: auto_insert(word_formatter)
 <user.slicer_formatter>$: auto_insert(slicer_formatter)
