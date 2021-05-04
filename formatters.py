@@ -203,6 +203,7 @@ ctx.lists['self.formatters'] = {
   'spongebob': 'spongebob',
   'title': 'title',
   'upper': 'upper',
+  'yeller': 'yeller',
   'yelsnik': 'yelsnik'
 }
 
@@ -313,6 +314,7 @@ format_functions = {
   'spongebob': lambda s: replace_words(spongebob(s)),
   'title': lambda s: replace_words(title(s)),
   'upper': lambda s: replace_words(allcaps(s)),
+  'yeller': lambda s: replace_words(allcaps(s)),
   'yelsnik': lambda s: replace_words(allcaps(snake(s)))
 }
 
