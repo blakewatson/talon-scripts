@@ -1,5 +1,5 @@
 touch: mouse_click()
-double click | dubclick:
+double touch | dubtouch:
   mouse_click()
   sleep(0.1)
   mouse_click()
