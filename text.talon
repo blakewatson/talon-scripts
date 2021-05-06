@@ -53,3 +53,6 @@ sinker:
 console log: insert('console.log(')
 spaceer: key(space left space)
 triple equals: insert(' === ')
+state import:
+  insert('import {  } from \'\';')
+  key(left:2)

@@ -216,7 +216,8 @@ ctx.lists['self.slicers'] = {
 # text replacements - todo: smarter replacement of different formats
 replacements = {
   'talent': 'talon',
-  'Talent': 'Talon'
+  'Talent': 'Talon',
+  'you i': 'ui'
 }
 
 replacement_list = [key for key in replacements.keys()]
