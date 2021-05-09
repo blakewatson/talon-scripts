@@ -1,5 +1,5 @@
 # This file will add a notification to tell you what Talon heard you say
-from talon import app, speech_system, imgui
+from talon import actions, app, speech_system, imgui
 
 phrase = ''
 
@@ -17,6 +17,9 @@ def on_phrase(j):
 
 @imgui.open(y=0)
 def draw_notification(gui):
+    if not actions.speech.enabled():
+        gui.text('[sleeping]')
+        return
     gui.text(phrase)
 
 
