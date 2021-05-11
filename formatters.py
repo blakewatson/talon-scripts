@@ -330,7 +330,7 @@ def shrink_formatter(m) -> str:
 @mod.capture(rule='<word>')
 def word_formatter(m) -> str:
   'Return a single word.'
-  return str(m.word)
+  return str(m.word.lower())
 
 @mod.capture(rule='^{self.slicers} <word>')
 def slicer_formatter(m) -> str:
