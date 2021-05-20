@@ -281,7 +281,6 @@ def spongebob(s):
   formatted_string = ''
   
   for char in str(s):
-    print(char)
     if not char.isalpha():
       formatted_string += char
     elif capitalize:
