@@ -215,6 +215,7 @@ ctx.lists['self.slicers'] = {
 
 # text replacements - todo: smarter replacement of different formats
 replacements = {
+  'note id': 'nodeId',
   'talent': 'talon',
   'Talent': 'Talon',
   'you i': 'ui'

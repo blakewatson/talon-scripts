@@ -65,6 +65,7 @@ code export default: insert('expert default ')
 code constant: insert('const ')
 code let: insert('let ')
 code far: insert('var ')
+code if: insert('if (')
 code function:
   insert('function ()')
   key(left:2)
