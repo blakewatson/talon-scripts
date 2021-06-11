@@ -58,6 +58,11 @@ not equals: insert(' !== ')
 code import:
   insert('import {  } from \'\';')
   key(left:2)
+# moves the cursor to the import body: { $here }
+code members:
+  key(cmd-left)
+  key(alt-right)
+  key(right:3)
 code export: insert('export const ')
 code export enum: insert('export enum ')
 code export type: insert('export type ')
