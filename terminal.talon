@@ -2,6 +2,8 @@ app: iTerm2
 app: Terminal
 -
 CD: key(c d space)
+lister: insert('ls ')
+list all: insert('ls -la')
 get status: insert('git status')
 get push: insert('git push')
 get pull: insert('git pull')
