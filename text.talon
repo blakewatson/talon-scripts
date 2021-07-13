@@ -54,6 +54,7 @@ sinker:
   key(;)
 console log: insert('console.log(')
 spacer: key(space left space)
+equator: insert('="')
 triple equals: insert(' === ')
 not equals: insert(' !== ')
 
