@@ -3,6 +3,13 @@ app: Code
 pallet: key(shift-cmd-p)
 phylum: key(cmd-p)
 action(app.window_open): key(cmd-shift-n)
+go edits:
+  key(cmd-k)
+  key(e)
+go files: key(cmd-shift-e)
+go liner: key(alt-cmd-o)
+go find: key(cmd-shift-f)
+go changes: key(ctrl-shift-g)
 
 # tabs
 action(app.tab_previous): key(alt-cmd-left)
@@ -18,4 +25,6 @@ grab all: key(cmd-shift-l)
 grab next: key(cmd-d)
 line up: key(alt-up)
 line down: key(alt-down)
+humpty: key(alt-shift-up)
+dumpty: key(alt-shift-down)
 expand: key(ctrl-e)

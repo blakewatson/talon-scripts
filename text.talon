@@ -42,6 +42,9 @@ assign:
   key(space)
   key('=')
   key(space)
+koala:
+  key(=)
+  key('"')
 pointer: key(- >)
 fat arrow: key(space = > space)
 <user.npm_script>: insert(npm_script)
