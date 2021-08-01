@@ -1,5 +1,5 @@
 app: java
-title: /Minecraft/
+and title: /Minecraft/
 -
 stuff: key(e)
 jump: key(space)

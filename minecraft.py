@@ -5,7 +5,7 @@ from threading import Timer
 ctx = Context()
 ctx.matches = r"""
 app: java
-title: /Minecraft/
+and title: /Minecraft/
 """
 
 is_active = False
