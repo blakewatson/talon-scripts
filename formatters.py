@@ -13,6 +13,7 @@ shrunken_words = {
   "apartment": "apt",
   "applications": "apps",
   "arguments": "args",
+  "asynchronous": "async",
   "attributes": "attrs",
   "authentication": "auth",
   "button": "btn",
