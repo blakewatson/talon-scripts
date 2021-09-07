@@ -17,3 +17,5 @@ get commit:
 talon user: insert('cd ~/.talon/user')
 talon log: insert('~/.talon/.venv/bin/tail_log')
 talon ripple: insert('~/.talon/.venv/bin/repl')
+# jumpy shortcut
+jumpy: insert('j ')
