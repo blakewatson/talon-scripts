@@ -41,6 +41,7 @@ shrunken_words = {
   "boolean": "bool",
   "return": "ret",
   "package": "pkg",
+  "progress": "wip",
   "python": "py",
   "project": "proj",
   "random": "rand",
