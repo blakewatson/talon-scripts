@@ -47,6 +47,7 @@ koala:
   key('"')
 pointer: key(- >)
 fat arrow: key(space = > space)
+node script: insert('npm run ')
 <user.npm_script>: insert(npm_script)
 slasher: key(/ / space)
 block: key(space { enter)
