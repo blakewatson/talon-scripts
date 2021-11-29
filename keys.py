@@ -114,18 +114,10 @@ keys.update({
     "ellipsis": "…"
 })
 
-### ALTERNATES ###
-
-keys.update({
-    "junk": "backspace",
-    "next": "space"
-})
-
 ### OTHER ###
 other_keys = [
     "backspace",
     "delete",
-    "end",
     "enter",
     "escape",
     "home",

@@ -24,14 +24,16 @@ smear:
 clap: key(cmd-right)
 lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
-rexy: key(cmd-shift-right)
+righty: key(cmd-shift-right)
 select all: key(cmd-a)
 
 ### text manipulation ###
+next: key(space)
+junk | chunk: key(backspace)
 slap: key(cmd-right enter)
 killer: key(backspace:2)
 blaster: key(alt-backspace)
-slurp:
+slurpy:
   key(backspace)
   key(delete)
 indent: edit.indent_more()

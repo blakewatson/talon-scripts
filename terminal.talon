@@ -4,6 +4,7 @@ app: Terminal
 CD: key(c d space)
 lister: insert('ls ')
 list all: insert('ls -la')
+make directory: insert('mkdir ')
 get status: insert('git status')
 get push: insert('git push')
 get pull: insert('git pull')
