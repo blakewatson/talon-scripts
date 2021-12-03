@@ -1,6 +1,8 @@
 ### global ###
 mission: key(ctrl-up)
 apogee: key(ctrl-down)
+flask: key(cmd-tab)
+cycle: key(cmd-~)
 alley: key(alt-space)
 clipper: key(alt-cmd-c)
 cut: key(cmd-x)
@@ -17,7 +19,6 @@ search: key(cmd-f)
 
 ### app ###
 save it: key(cmd-s)
-flask: key(cmd-tab)
 new window: app.window_open()
 gopreev: app.tab_previous()
 gonext: app.tab_next()
