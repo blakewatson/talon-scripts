@@ -1,7 +1,7 @@
 app: Code
 -
 pallet: key(shift-cmd-p)
-phylum: key(cmd-p)
+filer: key(cmd-p)
 action(app.window_open): key(cmd-shift-n)
 sidebar: key(cmd-b)
 go edits:

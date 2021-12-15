@@ -26,6 +26,9 @@ lefty: key(cmd-left)
 lecksy: key(cmd-shift-left)
 righty: key(cmd-shift-right)
 select all: key(cmd-a)
+grab it:
+  key(alt-right)
+  key(shift-alt-left)
 
 ### text manipulation ###
 next: key(space)
