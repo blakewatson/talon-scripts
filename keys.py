@@ -17,7 +17,8 @@ phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch littl
 letters_string = 'abcdefghijklmnopqrstuvwxyz'
 
 # alphabet dictionary
-keys = dict(zip(phonetic_alphabet.split(' '), letters_string))
+alpha_keys = dict(zip(phonetic_alphabet.split(' '), letters_string))
+keys = dict(alpha_keys)
 
 ### NUMERIC ###
 
@@ -166,8 +167,10 @@ def modified_arrow_key(m) -> str:
 ### KEYS ###
 
 mod.list('unmodified_key', desc='Unmodified keys')
-
 ctx.lists['self.unmodified_key'] = keys
+
+mod.list('alpha_key', desc='Alphabetic keys')
+ctx.lists['self.alpha_key'] = alpha_keys
 
 @mod.capture(rule='{self.unmodified_key}')
 def unmodified_key(m) -> str:
@@ -182,3 +185,8 @@ def key(m) -> str:
     except AttributeError:
         mods = []
     return '-'.join(mods + [m.unmodified_key])
+
+@mod.capture(rule='bigly {self.alpha_key}+')
+def upper_alpha_key(m) -> str:
+    'And uppercase alphabetic character'
+    return ''.join(m[1:]).upper()
