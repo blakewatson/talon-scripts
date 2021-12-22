@@ -1,5 +1,5 @@
-touch: mouse_click()
-double touch | dubtouch:
+beet: mouse_click()
+double beet | beatle:
   mouse_click()
   sleep(0.1)
   mouse_click()
@@ -8,10 +8,10 @@ double touch | dubtouch:
 escort: mouse_click(1)
 
 # middle button click
-middle click | midi: mouse_click(2)
+middle beat | midi: mouse_click(2)
 
 # click with modifiers
-<user.modifier_key> click:
+<user.modifier_key> beat:
   key("{modifier_key}:down")
   mouse_click()
   key("{modifier_key}:up")
