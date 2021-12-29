@@ -8,10 +8,10 @@ double beet | beatle:
 escort: mouse_click(1)
 
 # middle button click
-middle beat | midi: mouse_click(2)
+middle beet | midi: mouse_click(2)
 
 # click with modifiers
-<user.modifier_key> beat:
+<user.modifier_key> beet:
   key("{modifier_key}:down")
   mouse_click()
   key("{modifier_key}:up")

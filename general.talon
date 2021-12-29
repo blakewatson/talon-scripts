@@ -14,6 +14,7 @@ redo: edit.redo()
 action(edit.undo): key(cmd-z)
 action(edit.redo): key(cmd-shift-z)
 search: key(cmd-f)
+character map: key(ctrl-cmd-space)
 # repeater
 <user.ordinal>: core.repeat_command(ordinal-1)
 
