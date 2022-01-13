@@ -66,6 +66,7 @@ keys.update({
     "ampersand": "&",
     "dot": ".",
     "quote": "'",
+    "prime": "'",
     "L square": "[",
     "left square": "[",
     "square": "[",
@@ -111,6 +112,7 @@ keys.update({
     "pipe": "|",
     "dubquote": '"',
     "double quote": '"',
+    "primer": '"',
     "special": "§",
     "ellipsis": "…"
 })
