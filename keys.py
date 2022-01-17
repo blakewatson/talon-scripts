@@ -124,6 +124,7 @@ other_keys = [
     "enter",
     "escape",
     "home",
+    "end",
     "insert",
     "pagedown",
     "pageup",
