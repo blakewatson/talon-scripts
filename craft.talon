@@ -22,6 +22,7 @@ dumpty: key(space)
 checkers: key(cmd-alt-6)
 bulletin: key(cmd-alt-8)
 lister: key(cmd-alt-0)
+codify: key(cmd-shift-c)
 
 # misc
 insert meta: insert('cmeta ')
