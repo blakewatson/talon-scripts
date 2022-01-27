@@ -47,7 +47,7 @@ assign:
   key(space)
   key('=')
   key(space)
-koala:
+koala | equator:
   key(=)
   key('"')
 pointer: key(- >)
@@ -64,7 +64,6 @@ sinker:
   key(;)
 console log: insert('console.log(')
 spacer: key(space left space)
-equator: insert('="')
 triple equals: insert(' === ')
 not equals: insert(' !== ')
 
@@ -103,5 +102,7 @@ code (aero | arrow):
 code public: insert('public ')
 code protected: insert('protected ')
 code private: insert('private ')
+code get: insert('get ')
 code enum: insert('enum ')
 code type: insert('type ')
+code return: insert('return ')
