@@ -43,7 +43,7 @@ indent: edit.indent_more()
 dedent: edit.indent_less()
 
 ### code ###
-assign:
+assignment:
   key(space)
   key('=')
   key(space)
