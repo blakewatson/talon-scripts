@@ -1,4 +1,5 @@
 app.name: Firefox
+app.name: Firefox Developer Edition
 -
 
 # tabs

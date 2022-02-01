@@ -1,5 +1,6 @@
 app.name: Google Chrome
 app.name: Firefox
+app.name: Firefox Developer Edition
 -
 back: browser.go_back()
 go forward: browser.go_forward()
