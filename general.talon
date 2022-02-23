@@ -38,7 +38,7 @@ vsc: user.switch_app('Code')
 bowser: user.switch_app('Google Chrome')
 foxer: user.switch_app('Firefox')
 nova: user.switch_app('Nova')
-terminal: user.switch_app('iTerm2')
+terminal: user.switch_app('iTerm')
 tutor: user.switch_app('Tot')
 
 ### dictation ###
