@@ -50,6 +50,8 @@ assignment:
 koala | equator:
   key(=)
   key('"')
+  key('"')
+  key(left)
 pointer: key(- >)
 fat arrow: key(space = > space)
 node script: insert('npm run ')
