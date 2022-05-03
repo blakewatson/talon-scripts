@@ -46,6 +46,7 @@ keys.update({
     ",": ",",  # <== these things
     "tick": "`",
     "comma": ",",
+    "clamor": ",",
     "period": ".",
     "semi": ";",
     "colon": ":",
