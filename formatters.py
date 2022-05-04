@@ -98,6 +98,7 @@ shrunken_words = {
   "certificate": "cert",
   "character": "char",
   "column": "col",
+  "columns": "cols",
   "command": "cmd",
   "concatenate": "concat",
   "configuration": "config",
