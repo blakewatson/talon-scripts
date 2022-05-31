@@ -2,6 +2,7 @@ app: Code
 -
 pallet: key(shift-cmd-p)
 filer: key(cmd-p)
+symbols: key(shift-cmd-o)
 action(app.window_open): key(cmd-shift-n)
 sidebar: key(cmd-b)
 go edits:

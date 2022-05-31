@@ -41,6 +41,8 @@ slurpy:
   key(delete)
 indent: edit.indent_more()
 dedent: edit.indent_less()
+action(edit.indent_more): key(cmd-])
+action(edit.indent_less): key(cmd-[)
 
 ### code ###
 assignment:
