@@ -67,6 +67,7 @@ sinker:
   key(cmd-right)
   key(;)
 console log: insert('console.log(')
+console error: insert('console.error(')
 spacer: key(space left space)
 triple equals: insert(' === ')
 not equals: insert(' !== ')
