@@ -1,10 +1,11 @@
 app: Craft
 -
-display shortcuts: key(alt-.)
+display shortcuts: key(alt-cmd-,)
 
 # app shortcuts
 back: key(cmd-left)
 forward: key(cmd-right)
+new document: key(cmd-n)
 
 # tabs
 action(app.tab_next): key(ctrl-tab)
