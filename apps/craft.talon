@@ -6,6 +6,7 @@ display shortcuts: key(alt-cmd-,)
 back: key(cmd-left)
 forward: key(cmd-right)
 new document: key(cmd-n)
+focus: key(cmd-.)
 
 # tabs
 action(app.tab_next): key(ctrl-tab)
@@ -29,3 +30,4 @@ codify: key(cmd-shift-c)
 insert meta: insert('cmeta ')
 pallet: key(cmd-o)
 help: key(alt-cmd-,)
+insert shift: key(§ s h space)
