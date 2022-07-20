@@ -1,5 +1,5 @@
 beets: mouse_click()
-double beets | beatle:
+double beets | beetle:
   mouse_click()
   sleep(0.1)
   mouse_click()

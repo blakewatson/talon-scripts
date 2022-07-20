@@ -21,7 +21,7 @@ character map: key(ctrl-cmd-space)
 ### app ###
 save it: key(cmd-s)
 new window: app.window_open()
-tabby: app.tab_previous()
+table: app.tab_previous()
 tabber: app.tab_next()
 new tab: app.tab_open()
 close tab: app.tab_close()

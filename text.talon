@@ -62,7 +62,7 @@ run script: insert('npm run ')
 slasher: key(/ / space)
 block: key(space { enter)
 nolan: insert('null')
-thistle: insert('this.')
+fizzle: insert('this.')
 sinker:
   key(cmd-right)
   key(;)
