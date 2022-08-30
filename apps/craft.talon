@@ -8,14 +8,6 @@ forward: key(cmd-right)
 new document: key(cmd-n)
 focus: key(cmd-.)
 
-# tabs
-action(app.tab_next): key(ctrl-tab)
-action(app.tab_previous): key(ctrl-shift-tab)
-
-# indention
-action(edit.indent_more): key(tab)
-action(edit.indent_less): key(shift-tab)
-
 # editing
 line up: key(cmd-alt-up)
 line down: key(cmd-alt-down)

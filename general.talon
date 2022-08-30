@@ -11,8 +11,6 @@ paste: key(cmd-v)
 screenshotter: key(cmd-shift-4)
 undo: edit.undo()
 redo: edit.redo()
-action(edit.undo): key(cmd-z)
-action(edit.redo): key(cmd-shift-z)
 search: key(cmd-f)
 character map: key(ctrl-cmd-space)
 # repeater
@@ -26,8 +24,6 @@ tabber: app.tab_next()
 new tab: app.tab_open()
 close tab: app.tab_close()
 go tab <user.numeral>: user.go_to_numbered_tab(numeral)
-action(app.tab_close): key(cmd-w)
-action(app.tab_open): key(cmd-t)
 
 # app switcher
 focus <user.running_applications>: user.switch_app(running_applications)
