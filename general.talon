@@ -1,6 +1,6 @@
 ### global ###
 mission: key(ctrl-up)
-apogee: key(ctrl-down)
+windows: key(ctrl-down)
 flask: key(cmd-tab)
 cycle: key(cmd-~)
 alley: key(alt-space)
