@@ -1,6 +1,7 @@
 app.name: Google Chrome
 app.name: Firefox
 app.name: Firefox Developer Edition
+app.name: Microsoft Edge
 -
 back: browser.go_back()
 go forward: browser.go_forward()

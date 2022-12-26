@@ -4,6 +4,7 @@ ctx.matches = r"""
 app.name: Google Chrome
 app.name: Firefox
 app.name: Firefox Developer Edition
+app.name: Microsoft Edge
 """
 
 @ctx.action_class('browser')
