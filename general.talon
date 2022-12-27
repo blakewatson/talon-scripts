@@ -37,6 +37,7 @@ edgy: user.switch_app('Microsoft Edge')
 nova: user.switch_app('Nova')
 terminal: user.switch_app('iTerm2')
 tutor: user.switch_app('Tot')
+sketcher: user.switch_app('Sketch')
 
 ### dictation ###
 speak <phrase>: auto_insert(phrase)
