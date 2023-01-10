@@ -17,7 +17,7 @@ character map: key(ctrl-cmd-space)
 <user.ordinal>: core.repeat_command(ordinal-1)
 
 ### app ###
-save it: key(cmd-s)
+save it | supersave: key(cmd-s)
 new window: app.window_open()
 table: app.tab_previous()
 tabber: app.tab_next()
