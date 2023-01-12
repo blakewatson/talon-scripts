@@ -15,6 +15,7 @@ search: key(cmd-f)
 character map: key(ctrl-cmd-space)
 # repeater
 <user.ordinal>: core.repeat_command(ordinal-1)
+toggle desk heater: key(alt-`)
 
 ### app ###
 save it | supersave: key(cmd-s)
