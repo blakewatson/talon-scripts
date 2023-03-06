@@ -2,6 +2,8 @@
 <user.modified_arrow_key>: key(modified_arrow_key)
 <user.upper_alpha_key>: insert(upper_alpha_key)
 
+deli: key(delete)
+
 # alternate arrow keys
 go up: key(up)
 go down: key(down)
