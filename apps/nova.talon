@@ -1,7 +1,7 @@
 app: Nova
 -
 pallet: key(shift-cmd-p)
-phylum: key(cmd-p)
+phylum | filer: key(cmd-p)
 #action(user.go_to_numbered_tab): key(numeral)
 go tab <user.numeral>: key("cmd-{numeral}")
 add cursors: key(alt-shift-i)
