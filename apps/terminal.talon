@@ -1,5 +1,6 @@
 app: iTerm2
 app: Terminal
+app: Warp
 -
 CD: key(c d space)
 lister: insert('ls ')

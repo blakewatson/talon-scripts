@@ -36,7 +36,9 @@ bowser: user.switch_app('Google Chrome')
 firefox: user.switch_app('Firefox')
 edgy: user.switch_app('Microsoft Edge')
 nova: user.switch_app('Nova')
-terminal: user.switch_app('iTerm2')
+terminal:
+  user.switch_app('iTerm2')
+  user.switch_app('Warp')
 tutor: user.switch_app('Tot')
 sketcher: user.switch_app('Sketch')
 
