@@ -23,7 +23,7 @@ smear:
     key(left)
 clap: key(cmd-right)
 lefty: key(cmd-left)
-lecksy: key(cmd-shift-left)
+lecksy | leary: key(cmd-shift-left)
 righty: key(cmd-shift-right)
 select all: key(cmd-a)
 grab it:
