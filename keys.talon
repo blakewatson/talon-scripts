@@ -3,6 +3,7 @@
 <user.upper_alpha_key>: insert(upper_alpha_key)
 
 deli: key(delete)
+page top: key(home)
 
 # alternate arrow keys
 go up: key(up)

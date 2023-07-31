@@ -1,0 +1,1 @@
+formatting: key(cmd-shift-y)
