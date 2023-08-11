@@ -5,6 +5,7 @@ app.name: Google Chrome
 app.name: Firefox
 app.name: Firefox Developer Edition
 app.name: Microsoft Edge
+app.name: Safari
 """
 
 @ctx.action_class('browser')
