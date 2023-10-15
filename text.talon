@@ -112,3 +112,12 @@ code get: insert('get ')
 code enum: insert('enum ')
 code type: insert('type ')
 code return: insert('return ')
+
+# php
+flappy:
+    insert('<?php  ?>')
+    key(left:3)
+flecho:
+    insert('<?=  ?>')
+    key(left:3)
+code for each: insert('foreach ($'))

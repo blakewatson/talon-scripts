@@ -3,6 +3,7 @@ app.name: Firefox
 app.name: Firefox Developer Edition
 app.name: Microsoft Edge
 app.name: Safari
+app.name: Arc
 -
 back: browser.go_back()
 go forward: browser.go_forward()

@@ -35,6 +35,7 @@ vsc: user.switch_app('Code')
 bowser: user.switch_app('Google Chrome')
 firefox: user.switch_app('Firefox')
 edgy: user.switch_app('Microsoft Edge')
+archie: user.switch_app('Arc')
 nova: user.switch_app('Nova')
 terminal:
   user.switch_app('iTerm2')
