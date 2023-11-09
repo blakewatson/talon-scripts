@@ -1,0 +1,14 @@
+Spoken form, Cursorless identifier
+box, squareBrackets
+curly, curlyBrackets
+diamond, angleBrackets
+escaped box, escapedSquareBrackets
+escaped quad, escapedDoubleQuotes
+escaped round, escapedParentheses
+escaped twin, escapedSingleQuotes
+pair, any
+quad, doubleQuotes
+round, parentheses
+skis, backtickQuotes
+twin, singleQuotes
+void, whitespace

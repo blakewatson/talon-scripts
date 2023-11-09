@@ -1,0 +1,7 @@
+Spoken form, Cursorless identifier
+else, ifElseStatement.alternative
+funk, functionDeclaration.body
+if, ifStatement.consequence
+if else, ifElseStatement.consequence
+link, link.text
+try, tryCatchStatement.body

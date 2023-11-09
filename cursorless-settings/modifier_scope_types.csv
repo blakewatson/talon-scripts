@@ -1,0 +1,58 @@
+Spoken form, Cursorless identifier
+-five section, sectionLevelFive
+-four section, sectionLevelFour
+-one section, sectionLevelOne
+-six section, sectionLevelSix
+-three section, sectionLevelThree
+-two section, sectionLevelTwo
+arg, argumentOrParameter
+attribute, attribute
+block, paragraph
+branch, branch
+call, functionCall
+callee, functionCallee
+cell, notebookCell
+chapter, chapter
+char, character
+class, class
+class name, className
+command, command
+comment, comment
+condition, condition
+element, xmlElement
+end tag, xmlEndTag
+environment, environment
+file, document
+funk, namedFunction
+funk name, functionName
+identifier, identifier
+if state, ifStatement
+instance, instance
+item, collectionItem
+key, collectionKey
+lambda, anonymousFunction
+line, line
+link, url
+list, list
+map, map
+name, name
+paint, nonWhitespaceSequence
+paragraph, namedParagraph
+part, part
+regex, regularExpression
+section, section
+selector, selector
+sentence, sentence
+short paint, boundedNonWhitespaceSequence
+start tag, xmlStartTag
+state, statement
+string, string
+subparagraph, subParagraph
+subsection, subSection
+subsubsection, subSubSection
+tags, xmlBothTags
+token, token
+type, type
+unit, unit
+value, value
+word, word

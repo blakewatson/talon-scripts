@@ -11,7 +11,7 @@ ctx = Context()
 ### ALPHABET ###
 
 # my alphabet
-phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near orange pink queen red sun trap urge vest wet plex yank zoo'
+phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near odd pink queen red sun trap urge vest wet plex yank zoo'
 
 # letters
 letters_string = 'abcdefghijklmnopqrstuvwxyz'
@@ -39,7 +39,7 @@ def numeral(m) -> str:
 
 ### SPECIAL CHARACTERS ###
 
-keys.update({
+symbol_key_words = {
     # TODO: I'm not sure why we need these, I think it has something to do with
     # Dragon. Possibly it has been fixed by later improvements to talon? -rntz
     "`": "`",
@@ -116,7 +116,9 @@ keys.update({
     "primer": '"',
     "special": "§",
     "ellipsis": "…"
-})
+}
+
+keys.update(symbol_key_words)
 
 ### OTHER ###
 other_keys = [
@@ -194,3 +196,28 @@ def key(m) -> str:
 def upper_alpha_key(m) -> str:
     'And uppercase alphabetic character'
     return ''.join(m[1:]).upper()
+
+
+# stuff required by cursorless
+##############################
+
+mod.list("letter", desc="The spoken phonetic alphabet")
+mod.list("symbol_key", desc="All symbols from the keyboard")
+
+@mod.capture(rule="{self.letter}")
+def letter(m) -> str:
+    "One letter key"
+    return m.letter
+
+@mod.capture(rule="{self.symbol_key}")
+def symbol_key(m) -> str:
+    "One symbol key"
+    return m.symbol_key
+
+@mod.capture(rule="( <self.letter> | <self.numeral> | <self.symbol_key> )")
+def any_alphanumeric_key(m) -> str:
+    "any alphanumeric key"
+    return str(m)
+
+ctx.lists["self.letter"] = dict(alpha_keys)
+ctx.lists["self.symbol_key"] = symbol_key_words
