@@ -11,7 +11,7 @@ ctx = Context()
 ### ALPHABET ###
 
 # my alphabet
-phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near odd pink queen red sun trap urge vest wet plex yank zoo'
+phonetic_alphabet = 'air bill cap drum each faint gust ham sit jury crunch little made near open pink queen red sun trap urge vest wet plex yank zoo'
 
 # letters
 letters_string = 'abcdefghijklmnopqrstuvwxyz'
