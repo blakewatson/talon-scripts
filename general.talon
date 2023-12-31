@@ -44,6 +44,13 @@ discord:
   key(ctrl-1)
   sleep(0.2)
   key(cmd-2)
+# brainwave tab in arc
+brainwave:
+  user.switch_app('Arc')
+  sleep(0.1)
+  key(ctrl-1)
+  sleep(0.2)
+  key(cmd-3)
 # a fine start in the current arc space
 finer tab:
   user.switch_app('Arc')
