@@ -38,10 +38,7 @@ firefox: user.switch_app('Firefox')
 edgy: user.switch_app('Microsoft Edge')
 archie: user.switch_app('Arc')
 # discord tab in arc
-discord:
-  user.switch_app('Firefox')
-  sleep(0.1)
-  key(cmd-2)
+discord: user.switch_app('Discord')
 # brainwave tab in firefox
 brainwave:
   user.switch_app('Firefox')
