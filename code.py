@@ -6,4 +6,4 @@ ctx = Context()
 @mod.capture(rule='runner <word>')
 def npm_script(m) -> str:
   'Run an npm script.'
-  return 'npm run ' + m.word.lower()
+  return 'npm run ' + str(m.word).lower()

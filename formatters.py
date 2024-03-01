@@ -326,7 +326,7 @@ format_functions = {
 @mod.capture(rule='<word>')
 def shrink_formatter(m) -> str:
   'Shrink the word.'
-  word = m.word.lower()
+  word = str(m.word).lower()
   if word in shrunken_words:
     return shrunken_words[word]
   return ''
@@ -334,12 +334,12 @@ def shrink_formatter(m) -> str:
 @mod.capture(rule='<word>')
 def word_formatter(m) -> str:
   'Return a single word.'
-  return str(m.word.lower())
+  return str(m.word).lower()
 
 @mod.capture(rule='^{self.slicers} <word>')
 def slicer_formatter(m) -> str:
   'Returns the first n characters of the provided word.'
-  return slicer(m.word, int(m.slicers))
+  return slicer(str(m.word), int(m.slicers))
 
 @mod.capture(rule='format {self.formatters}')
 def formatters(m) -> str:
@@ -349,4 +349,4 @@ def formatters(m) -> str:
 @mod.capture(rule='{self.formatters} <phrase>')
 def format(m) -> str:
   'Format the next spoken text according to the provided formatter.'
-  return format_functions[m.formatters](m.phrase)
+  return format_functions[m.formatters](str(m.phrase))
