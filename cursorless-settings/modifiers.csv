@@ -17,3 +17,8 @@ previous, previous
 slice, verticalRange
 tail, extendThroughEndOf
 trailing, trailing
+
+
+# 2024-03-19 22:50:15 - New entries automatically added by cursorless
+grand, ancestor
+visible, visible
