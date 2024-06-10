@@ -37,6 +37,7 @@ bowser: user.switch_app('Google Chrome')
 firefox: user.switch_app('Firefox')
 edgy: user.switch_app('Microsoft Edge')
 archie: user.switch_app('Arc')
+obsidian: user.switch_app('Obsidian')
 # discord tab in arc
 discord: user.switch_app('Discord')
 # brainwave tab in firefox
