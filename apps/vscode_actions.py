@@ -2,6 +2,7 @@ from talon import Context, actions
 ctx = Context()
 ctx.matches = r"""
 app: Code
+app: Code - Insiders
 """
 
 @ctx.action_class('app')

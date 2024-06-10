@@ -1,4 +1,5 @@
 app: Code
+app: Code - Insiders
 -
 pallet: key(shift-cmd-p)
 filer: key(cmd-p)
