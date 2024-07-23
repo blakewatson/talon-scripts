@@ -59,3 +59,6 @@ sketcher: user.switch_app('Sketch')
 
 ### dictation ###
 speak <phrase>: auto_insert(phrase)
+^dictate$:
+  speech.disable()
+  key(cmd-y)
