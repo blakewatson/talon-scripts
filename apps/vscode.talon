@@ -23,3 +23,12 @@ delete line: key(cmd-shift-k)
 humpty: key(alt-shift-up)
 dumpty: key(alt-shift-down)
 expand: key(ctrl-e)
+edit left:
+    key(cmd-k)
+    key(cmd-left)
+edit white | right:
+    key(cmd-k)
+    key(cmd-right)
+enhance:
+    key(cmd-k)
+    key(alt-cmd-t)
