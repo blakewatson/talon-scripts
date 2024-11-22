@@ -56,3 +56,6 @@ break, breakLine
 decrement, decrement
 increment, increment
 join, joinLines
+
+# 2024-11-17 23:19:20 - New entries automatically added by cursorless
+follow split, followLinkAside

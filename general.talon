@@ -33,11 +33,12 @@ archiver: user.switch_app('The Archive')
 crafter: user.switch_app('Craft')
 vsc: user.switch_app('Code')
 bicycle: user.switch_app('Bike')
-bowser: user.switch_app('Google Chrome')
+^google$: user.switch_app('Google Chrome')
 firefox: user.switch_app('Firefox')
 edgy: user.switch_app('Microsoft Edge')
 archie: user.switch_app('Arc')
 obsidian: user.switch_app('Obsidian')
+^screens$: user.switch_app('Screens 5')
 # discord tab in arc
 discord: user.switch_app('Discord')
 # brainwave tab in firefox
@@ -45,6 +46,11 @@ brainwave:
   user.switch_app('Firefox')
   sleep(0.1)
   key(cmd-1)
+# fastmail tab in firefox
+fastmill|fastmail:
+  user.switch_app('Firefox')
+  sleep(0.1)
+  key(cmd-2)
 # a fine start in the current arc space
 finer tab:
   user.switch_app('Arc')
