@@ -11,7 +11,7 @@ jeep: key(up)
 dune: key(down)
 lloyd: key(left)
 lucy: key(left)
-chris: key(right)
+chris | crystal: key(right)
 gravel: key(shift-left)
 grabber: key(shift-right)
 peg: key(alt-left)
@@ -43,7 +43,7 @@ indent: edit.indent_more()
 dedent: edit.indent_less()
 
 ### quick text ###
-laughy: key(l o l)
+lol: key(l o l)
 
 ### code ###
 assignment:

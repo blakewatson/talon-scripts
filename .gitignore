@@ -12,4 +12,4 @@ node_modules
 build
 dist
 vendor
-_cursorless-talon
+cursorless-talon
