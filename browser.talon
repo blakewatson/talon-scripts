@@ -5,7 +5,7 @@ app.name: Microsoft Edge
 app.name: Safari
 app.name: Arc
 -
-back: browser.go_back()
+back | go back: browser.go_back()
 go forward: browser.go_forward()
 URL | locator: browser.focus_address()
 developer tools: browser.toggle_dev_tools()

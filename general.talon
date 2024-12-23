@@ -68,3 +68,7 @@ speak <phrase>: auto_insert(phrase)
 ^dictate$:
   speech.disable()
   key(cmd-y)
+
+### mouseless ###
+mousy: key(cmd-alt-')
+scatter: key(cmd-shift-')
