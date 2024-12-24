@@ -26,7 +26,7 @@ expand: key(ctrl-e)
 edit left:
     key(cmd-k)
     key(cmd-left)
-edit white | right:
+edit (white | right):
     key(cmd-k)
     key(cmd-right)
 enhance:
