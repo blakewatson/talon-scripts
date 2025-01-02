@@ -71,4 +71,4 @@ speak <phrase>: auto_insert(phrase)
 
 ### mouseless ###
 mousy: key(cmd-alt-')
-scatter: key(cmd-shift-')
+scatter: key(cmd-alt-;)
