@@ -5,6 +5,13 @@ is_mac = app.platform == "mac"
 ctx = Context()
 mac_ctx = Context()
 mod = Module()
+
+# Add Cursor support
+mod.apps.vscode = """
+os: mac
+and app.name: Cursor
+"""
+
 mod.apps.vscode = """
 os: mac
 and app.bundle: com.microsoft.VSCode

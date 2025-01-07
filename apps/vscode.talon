@@ -1,5 +1,6 @@
 app: Code
 app: Code - Insiders
+app: Cursor
 -
 pallet: key(shift-cmd-p)
 filer: key(cmd-p)
