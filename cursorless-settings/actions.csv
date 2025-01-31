@@ -59,3 +59,9 @@ join, joinLines
 
 # 2024-11-17 23:19:20 - New entries automatically added by cursorless
 follow split, followLinkAside
+
+# 2025-01-30 23:04:12 - New entries automatically added by cursorless
+append, addSelection
+append post, addSelectionAfter
+append pre, addSelectionBefore
+flash, flashTargets
