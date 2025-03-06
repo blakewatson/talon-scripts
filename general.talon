@@ -42,14 +42,14 @@ obsidian: user.switch_app('Obsidian')
 ^screens$: user.switch_app('Screens 5')
 # discord tab in arc
 discord: user.switch_app('Discord')
-# brainwave tab in firefox
+# brainwave tab in chrome
 brainwave:
-  user.switch_app('Firefox')
+  user.switch_app('Chrome')
   sleep(0.1)
   key(cmd-1)
-# fastmail tab in firefox
+# fastmail tab in chrome
 fastmill|fastmail:
-  user.switch_app('Firefox')
+  user.switch_app('Chrome')
   sleep(0.1)
   key(cmd-2)
 # a fine start in the current arc space
@@ -59,6 +59,7 @@ finer tab:
   key(cmd-1)
 nova: user.switch_app('Nova')
 terminal:
+  user.switch_app('Terminal')
   user.switch_app('iTerm2')
   user.switch_app('Warp')
 tutor: user.switch_app('Tot')
