@@ -44,12 +44,12 @@ obsidian: user.switch_app('Obsidian')
 discord: user.switch_app('Discord')
 # brainwave tab in chrome
 brainwave:
-  user.switch_app('Chrome')
+  user.switch_app('Google Chrome')
   sleep(0.1)
   key(cmd-1)
 # fastmail tab in chrome
 fastmill|fastmail:
-  user.switch_app('Chrome')
+  user.switch_app('Google Chrome')
   sleep(0.1)
   key(cmd-2)
 # a fine start in the current arc space
