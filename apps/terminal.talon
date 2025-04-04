@@ -1,11 +1,13 @@
 app: iTerm2
 app: Terminal
 app: Warp
+app: Code
 -
 CD: key(c d space)
 lister: insert('ls ')
 list all: insert('ls -la')
 make directory: insert('mkdir ')
+dee net | dnet: insert('dotnet ')
 get status: insert('git status')
 get push: insert('git push')
 get pull: insert('git pull')

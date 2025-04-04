@@ -43,7 +43,7 @@ indent: edit.indent_more()
 dedent: edit.indent_less()
 
 ### quick text ###
-lol: key(l o l)
+well oh well: key(l o l)
 
 ### code ###
 assignment:
