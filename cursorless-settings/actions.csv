@@ -65,3 +65,9 @@ append, addSelection
 append post, addSelectionAfter
 append pre, addSelectionBefore
 flash, flashTargets
+
+# 2025-04-14 20:04:52 - New entries automatically added by cursorless
+git accept, gitAccept
+git revert, gitRevert
+git stage, gitStage
+git unstage, gitUnstage

@@ -40,18 +40,20 @@ edgy: user.switch_app('Microsoft Edge')
 archie: user.switch_app('Arc')
 obsidian: user.switch_app('Obsidian')
 ^screens$: user.switch_app('Screens 5')
+^brainwave$: user.switch_app('BrainWave Chat')
+fastmill|fastmail: user.switch_app('Fastmail')
 # discord tab in arc
 discord: user.switch_app('Discord')
 # brainwave tab in chrome
-brainwave:
-  user.switch_app('Google Chrome')
-  sleep(0.1)
-  key(cmd-1)
+#brainwave:
+  #5user.switch_app('Google Chrome')
+  #5sleep(0.1)
+  #5key(cmd-1)
 # fastmail tab in chrome
-fastmill|fastmail:
-  user.switch_app('Google Chrome')
-  sleep(0.1)
-  key(cmd-2)
+#fastmill|fastmail:
+  #user.switch_app('Google Chrome')
+  #sleep(0.1)
+  #key(cmd-2)
 # a fine start in the current arc space
 finer tab:
   user.switch_app('Arc')
