@@ -6,14 +6,17 @@ settings():
 camera: mouse_drag(2)
 over: mouse_release(2)
 
-farther: mouse_scroll(-20, 0)
+zoom out: mouse_scroll(-20, 0)
 closer: mouse_scroll(20, 0)
 
-lucky | looky:
+party up: key("{")
+party down: key("}")
+
+spinner:
   key(e:down)
   sleep(0.5)
   key(e:up)
-ready:
+rusty:
   key(q:down)
   sleep(0.5)
   key(q:up)
