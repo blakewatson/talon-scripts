@@ -12,6 +12,11 @@ closer: mouse_scroll(20, 0)
 party up: key("{")
 party down: key("}")
 
+choices:
+  key(':down)
+  sleep(0.25)
+  key(':up)
+
 spinner:
   key(e:down)
   sleep(0.5)
