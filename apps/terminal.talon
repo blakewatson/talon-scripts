@@ -23,3 +23,5 @@ talon log: insert('~/.talon/.venv/bin/tail_log')
 talon ripple: insert('~/.talon/.venv/bin/repl')
 # jumpy shortcut
 jumpy: insert('j ')
+# zoxide shortcut
+zippy: insert('z ')
