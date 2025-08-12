@@ -5,6 +5,7 @@ app.name: Microsoft Edge
 app.name: Safari
 app.name: Arc
 app.name: Fastmail
+app.name: Vivaldi
 -
 back | go back: browser.go_back()
 go forward: browser.go_forward()
