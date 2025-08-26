@@ -33,3 +33,5 @@ edit (white | right):
 enhance:
     key(cmd-k)
     key(alt-cmd-t)
+# zoxide shortcut
+zippy: insert('z ')
