@@ -5,7 +5,7 @@ double beets | beetle:
   mouse_click()
 
 # right click
-escort: mouse_click(1)
+escort | selector: mouse_click(1)
 
 # middle button click
 middleton | midi: mouse_click(2)

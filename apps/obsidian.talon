@@ -1,6 +1,6 @@
 app: Obsidian
 -
-pallet | palate: key(cmd-shift-p)
+pallet | palate | please: key(cmd-shift-p)
 filer: key(cmd-p)
 sidebar | focusing: key(shift-cmd-b)
 tags: key(alt-cmd-b)

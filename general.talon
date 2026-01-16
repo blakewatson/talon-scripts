@@ -1,4 +1,5 @@
 ### global ###
+breaker: key(shift-enter)
 mission: key(ctrl-up)
 windows: key(ctrl-down)
 flask: key(cmd-tab)
