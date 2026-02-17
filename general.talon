@@ -1,4 +1,5 @@
 ### global ###
+scroll mode: key(f6)
 breaker: key(shift-enter)
 mission: key(ctrl-up)
 windows: key(ctrl-down)
