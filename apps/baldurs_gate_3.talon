@@ -6,7 +6,7 @@ settings():
 zoom out: mouse_scroll(-20, 0)
 closer: mouse_scroll(20, 0)
 
-# psycho party members
+# cycle party members
 party up: key("{")
 party down: key("}")
 
