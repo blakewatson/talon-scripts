@@ -16,6 +16,12 @@ choices:
   sleep(0.25)
   key(':up)
 
+# show item labels
+labels:
+  key(u:down)
+  sleep(5)
+  key(u:up)
+
 # select continuous
 selection:
   key(ctrl:down)
