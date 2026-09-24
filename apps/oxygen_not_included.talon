@@ -1,7 +1,7 @@
 app: Oxygen Not Included
 -
 settings():
-  key_hold: 50
+  key_hold = 50
 
 pan up:
   key(w:down)

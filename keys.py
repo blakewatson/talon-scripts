@@ -1,10 +1,5 @@
 from talon import Module, Context
 
-# dummy speech engine for testing
-from talon.engines.dummy import DummyEngine
-from talon import speech_system
-#speech_system.add_engine(DummyEngine())
-
 mod = Module()
 ctx = Context()
 

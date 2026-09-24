@@ -1,7 +1,7 @@
 app: Divinity - Original Sin 2
 --
 settings():
-  key_hold: 100
+  key_hold = 100
 
 zoom out: mouse_scroll(-20, 0)
 closer: mouse_scroll(20, 0)

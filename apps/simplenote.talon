@@ -1,4 +1,4 @@
 app: Simplenote
-or title: Simplenote
+title: Simplenote
 -
 insert meta: insert('mmeta ')

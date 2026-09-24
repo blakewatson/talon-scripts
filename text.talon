@@ -120,4 +120,4 @@ flappy:
 flecho:
     insert('<?=  ?>')
     key(left:3)
-code for each: insert('foreach ('))
+code for each: insert('foreach (')
