@@ -13,3 +13,4 @@ build
 dist
 vendor
 cursorless-talon
+__pycache__
