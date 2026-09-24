@@ -4,3 +4,6 @@ mode: sleep
 ^dictate:
   key(cmd-y)
   speech.enable()
+^escape:
+  key(esc)
+  speech.enable()
