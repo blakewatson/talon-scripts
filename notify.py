@@ -25,8 +25,12 @@ async def draw_notification(ui: egui.Ui):
     label = (egui.RichText(text).size(13)
              .color(egui.Color32.from_hex('#f2f2f2'))
              .extra_letter_spacing(0.3))
+    background = egui.Color32.from_hex('#1c1c1c')
+    # The frame only paints its content width. Cover the rest of the native
+    # window too, including any width reserved by Talon's autosizing.
+    ui.painter().rect_filled(ui.clip_rect(), 0, background)
     frame = (egui.Frame.none().inner_margin(1)
-             .fill(egui.Color32.from_hex('#1c1c1c')))
+             .fill(background))
     async with frame.show():
         # Keep long phrases on one line so the display stays inside the menu bar.
         # Center the non-selectable label vertically without stretching it to
